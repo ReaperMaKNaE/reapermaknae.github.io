@@ -34,5 +34,11 @@ link를 거는 방법은 아래와 같다. <br><br>
 사진도 역시 찍어 올려야하니, github에서 받은 이미지 몇개를 한번 찾아보자.<br>
 ![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201024023449.png)
 
+빼먹은게 있다. 개행 시, 스페이스바 두번 눌러주면 편하게 할 수 있다.   
+스페이스바 두번.   
+귀찮게 br같은거 적지말자.  
+  
+
+
 <br>
 2020-10-24 새벽 2시 40분, 여기서 끝.
