@@ -3,6 +3,7 @@ layout : post
 title : "Typora Test for github"
 date : 2020-10-24 08:26 +0900
 description : typora test
+img : 20201024-1.png
 ---
 
 ## Typora 설치
