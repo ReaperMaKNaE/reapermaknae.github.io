@@ -32,7 +32,7 @@ link를 거는 방법은 아래와 같다. <br><br>
 몇가지가 더 있는데 일단 여기서 마무리.
 
 사진도 역시 찍어 올려야하니, github에서 받은 이미지 몇개를 한번 찾아보자.<br>
-![img1](20201024023449.png)
+![img1](https://github.com/ReaperMaKNaE/reapermaknae.github.io/tree/main/assets/img/20201024023449.png)
 
 <br>
 2020-10-24 새벽 2시 40분, 여기서 끝.
