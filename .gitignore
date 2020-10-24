@@ -3,8 +3,7 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
-/_site/
-/.sass-cache/
-/.jekyll-metadata
 /.brackets.json
-/Gemfile
+/jekyllbuild/
+/documentation/node_modules/
+/documentation/jekyllbuild/
