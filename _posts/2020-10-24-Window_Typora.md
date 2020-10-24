@@ -62,3 +62,8 @@ while(True):
 cv2.destroyAllWindows()
 ```
 
+
+
+## 관리하면서 알아낸 것.
+
+tag를 안적으면 글이 안보인다. 일단 꾸역꾸역 써봐야겠다. 아마도 금방 테마를 바꿀 것 같다. image는 optional인데 혹시나해서 아무거나 넣어본 상황.
