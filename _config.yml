@@ -1,123 +1,53 @@
-full_rebuild: true
-name: Gridster
-description: the material experience for jekyll
-destination: jekyllbuild
-url: https://reapermaknae.github.io #place url
-baseurl: #place folder name if site is served in subfolder
-permalink: /:title/
-paginate: 8
-paginate_path: /page/:num/
-infinite_scroll: true #change to false if you want to use pagination
-gems: [jekyll-paginate]
-tag_dir: /tag
-category_dir: /category
-author_dir: /author
-author_title_prefix: 'Posted by '
-media_folder: /media/compressed
-author_default_avatar: /profile-pic.jpg
-tumblr: "#"
-pinterest: "#"
-instagram: "#"
-twitter: "#"
-facebook: "#"
-youtube: "#"
-vimeo: "#"
-soundcloud: "#"
+logo: # add logo name
+title: Bef - Enjoy Freedom
+description: > # this means to ignore newlines until "baseurl:"
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://reapermaknae.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-encoding: utf-8
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post-material-sidebar-left"
-      type: "standard"
-      homedisplay: "featimg"
+# Banner settings
+video: GetDistanceFromVideo.mp4  # add banner video. Add your video file to the folder video
+banner-title: Nothing special # add banner title
+banner-desc: POE # add banner description
+
+# Author settings
+author-pic: # your photo
+author-name: reapermaknae # your name
+about-author: student # about author
+email: reapermaknae@gmail.com # your email
+phone: 000-0000-0000 # your pnone number
+website: https://reapermaknae.github.io # you website
+
+# Social link
+google_url:    # add url link
+twitter_url:   # add url link
+instagram_url: # add url link
+pinterest_url: # add url link
+dribbble_url:  # add url link
+facebook_url:  # add url link
+
+# Disqus
+discus_identifier: mr-brown # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
+
+# Newsletter
+mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+# Tracker
+analytics:
+
+# Paginate
+paginate: 12
+paginate_path: /page:num/
+
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-relative_permalinks: false
-exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md, jekyllbuild]
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-sitemap
 
-# prose.io configurations
-prose:
-  media: "img"
-  metadata:
-    _posts:
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-      - name: "layout"
-        field:
-          element: "select"
-          label: "Layout"
-          help: "display post at full width or with sidebar"
-          options:
-            - name: "with sidebar"
-              value: "post"
-            - name: "full width"
-              value: "post-full"
-      - name: "author"
-        field:
-          element: "text"
-          label: "Author"
-          help: "author id as defined within _data/authors.yml"
-          type: "text"
-      - name: "featimg"
-        field:
-          element: "text"
-          label: "Featured Image"
-          help: "featured image within the img-folder"
-          type: "text"
-      - name: "type"
-        field:
-          element: "select"
-          label: "Post Type"
-          help: "each type has some special feature"
-          options:
-            - name: "Standard"
-              value: "standard"
-            - name: "Image"
-              value: "image"
-            - name: "Gallery"
-              value: "gallery"
-            - name: "Audio"
-              value: "audio"
-            - name: "YouTube"
-              value: "youtube"
-            - name: "Vimeo"
-              value: "vimeo"
-      - name: "homedisplay"
-        field:
-          element: "select"
-          label: "Home Display"
-          help: "decide whether to display embedded element (for post types: audio, youtube, vimeo) or Featured Image on home page"
-          options:
-            - name: "Featured Image"
-              value: "featimg"
-            - name: "Embedded Element"
-              value: "iframe"
-      - name: "vimeo-embed"
-        field:
-          element: "text"
-          label: "Vimeo Embedding Code"
-          help: "Set post type to vimeo in order for this to work"
-      - name: "gallery-id"
-        field:
-          element: "text"
-          label: "Gallery ID"
-          help: "ID of the gallery defined within _data/galleries.yml - use include in content to use"
-      - name: "audio-embed"
-        field:
-          element: "text"
-          label: "Audio Embedding Code"
-          help: "Set post type to audio in order for this to work"
-      - name: "yt-video-id"
-        field:
-          element: "text"
-          label: "YouTube Video ID"
-          help: "Set post type to youtube in order for this to work. Do not set featured image, as the youtube video thumbnail will be used"
-          type: "text"
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
