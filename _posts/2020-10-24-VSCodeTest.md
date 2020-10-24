@@ -1,9 +1,10 @@
 ---
 layout : post
 title : "Markdown 문법 개인용"
-date : 2020-10-24 +0000
+date : 2020-10-24 +0900
 description : Markdown Simple Grammer
 tag : Test
+img : 20201024-2.jpg
 ---
 
 # markdown 문법 정리
