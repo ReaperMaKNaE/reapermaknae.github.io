@@ -11,7 +11,7 @@ banner-title: # add banner title
 banner-desc: # add banner description
 
 # Author settings
-author-pic: # your photo
+author-pic: jbi.jpg # your photo
 author-name: reapermaknae # your name
 about-author: student # about author
 email: reapermaknae@gmail.com # your email
@@ -27,7 +27,7 @@ dribbble_url:  # add url link
 facebook_url:  # add url link
 
 # Disqus
-discus_identifier: mr-brown # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
+discus_identifier: # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
 
 # Newsletter
 mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
