@@ -1,7 +1,7 @@
 ---
 layout : post
 title : "Typora Test for github"
-date : 2020-10-24 08:26:00 +0900
+date : 2020-10-24 09:26:00 +0900
 description : typora test
 img : 20201024-3.jpg
 tag : [Typora, Introduction]
@@ -76,5 +76,9 @@ banner에 저장된 video가 제대로 재생이 안된다. 어떻게 방법이 
 
 -> 일단 jpg 파일을 받아야 시작되는 것을 확인. 따라서 임의의 jpg파일을 추가하였음.
 
--> 홈페이지 개조 중!
+-> 해결완료!
+
+
+
+추가적으로 홈페이지 개조 중! (현재 진행형)
 
