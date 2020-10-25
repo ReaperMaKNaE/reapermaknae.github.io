@@ -3,8 +3,8 @@ layout : post
 title : "[S-hero Rollivery]opencv 물체 판별 확인을 위한 준비와 과정"
 date : 2020-10-24 20:26:00 +0900
 description : object detection using opencv
-img : 20201024-4.jpg
-tag : [opencv, ObjectDetection]
+img : 20201024-5.jpg
+tag : [Opencv, ObjectDetection, S-hero Rollivery]
 ---
 
 ## Algorithm
@@ -101,10 +101,12 @@ eulerAngle = int(soup.find.text('p'))
 
 속도를 제외하곤 어떻게 계산했는지에 대한 코드는 아래 링크에서 확인할 수 있다.
 
-https://github.com/ReaperMaKNaE/Streaming/blob/master/DrawDepthMap_Ver2.py
+[https://github.com/ReaperMaKNaE/Streaming/blob/master/DrawDepthMap_Ver2.py](https://github.com/ReaperMaKNaE/Streaming/blob/master/DrawDepthMap_Ver2.py)
+
+
 
 
 
 Reference : 
 
-flask 데이터 관련, https://ychae-leah.tistory.com/22
+flask 데이터 관련, [https://ychae-leah.tistory.com/22](https://ychae-leah.tistory.com/22)
