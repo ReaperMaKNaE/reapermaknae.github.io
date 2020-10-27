@@ -1,10 +1,10 @@
 ---
 layout : post
 title : "[S-hero Rollivery] RaspberryPI 통신 확인"
-date : 2020-10-26 20:26:00 +0900
+date : 2020-10-27 +0900
 description : check raspberryPI communication
 img : 20201027-1.jpg
-tag : [raspberrypi, rollivery, oCamS-1CGN-U]
+tag : [S-hero Rollivery]
 ---
 
 ### RaspberryPI Update

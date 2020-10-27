@@ -3,6 +3,7 @@ layout : post
 title : "[S-hero Rollivery] oCamS-1CGN-U - IMU Sensor값 받아오기, 로봇 속도 결정"
 date : 2020-10-25 +0900
 description : Find velocity from IMU
+img : 20201025-2.jpg
 tag : [Opencv, S-hero Rollivery, IMU, Kalman filter]
 ---
 
