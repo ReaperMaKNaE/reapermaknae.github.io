@@ -43,7 +43,7 @@ __*echo "@LMGEUL" > /dev/ttyACM0*__
 ``` python
 import serial
 PI = 3.141592
-ser = serial.Serial("dev/ttyACM0", 115200)
+ser = serial.Serial("/dev/ttyACM0", 115200)
 
 while True:
     filteredData = ser.readline().decode()
