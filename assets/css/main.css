@@ -4310,6 +4310,11 @@ cite {
   padding-bottom: 2rem;
 }
 
+.post .entry_content img{
+  max-width: 100%;
+  horizontal-align: middle;
+}
+
 .post_footer {
   padding: 2rem 0;
   background-color: #ffffff;
