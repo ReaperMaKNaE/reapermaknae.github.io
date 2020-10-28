@@ -89,6 +89,7 @@ pre {
   /* 1 */
   font-size: 1em;
   /* 2 */
+  overflow-x: scroll
 }
 
 /* Text-level semantics
@@ -211,6 +212,8 @@ audio:not([controls]) {
  */
 img {
   border-style: none;
+  max-width: 100%;
+  horizontal-align: middle;
 }
 
 /**
@@ -4308,11 +4311,6 @@ cite {
 
 .post .entry_content {
   padding-bottom: 2rem;
-}
-
-.post .entry_content img{
-  max-width: 100%;
-  horizontal-align: middle;
 }
 
 .post_footer {
