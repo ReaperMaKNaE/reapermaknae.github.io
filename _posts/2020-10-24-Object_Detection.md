@@ -30,12 +30,10 @@ cx와 cy는 로봇으로부터 상대적인 x, y좌표, d는 로봇으로부터 
 	<body>
 		<img id="bg" src="{{ url_for('video_feed')}}">
         <h>
-            <!--{{velocity}}라고 써놨는데 안보이는 것 같다.-->
-        	{{velocity}}
+            \{{velocity}}
         </h>
         <p>
-            <!--{{eulerAngle}}이라고 써놨는데 안보이는 것 같다.-->
-            {{eulerAngle}}
+            \{{eulerAngle}}
         </p>
 	</body>
 </html>
