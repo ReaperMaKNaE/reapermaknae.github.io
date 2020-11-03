@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 node_modules/
 yarn.lock
+_posts/.~2020-11-03-SimpleCheck.md
