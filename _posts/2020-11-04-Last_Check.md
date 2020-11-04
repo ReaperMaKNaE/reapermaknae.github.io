@@ -3,7 +3,7 @@ layout : post
 title : "[S-hero Rollivery] Rollivery, 마지막 체크."
 date : 2020-11-04 +0900
 description : S-hero Rollivery
-img : 20201104-3.png
+img : 20201104-3.jpg
 tag : [S-hero Rollivery]
 ---
 
