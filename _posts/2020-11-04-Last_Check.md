@@ -3,11 +3,9 @@ layout : post
 title : "[S-hero Rollivery] Rollivery, 마지막 체크."
 date : 2020-11-04 +0900
 description : S-hero Rollivery
-img : 20201104-3.png
+img : 20201104-3.jpg
 tag : [S-hero Rollivery]
 ---
-
-### 로봇 조립 마무리
 
 ### 마지막 점검
 
@@ -29,7 +27,7 @@ tag : [S-hero Rollivery]
 
  여러번 시도해도 안되는 바람에 마음속으로 충분히 인내하고 ~~*__부술까 말까__*~~ 참다가 입벌린 상태를 찍은 적이 없는 것 같아서 일단 한 컷.
 
- ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201104-3.png)
+ ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201104-3.jpg)
 
 
 

@@ -7,8 +7,6 @@ img : 20201103-4.png
 tag : [S-hero Rollivery]
 ---
 
-### 로봇 조립 마무리
-
  ### Data 전송 확인 및 연구실 환경 확인
 
 
