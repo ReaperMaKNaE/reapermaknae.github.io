@@ -35,7 +35,7 @@ tag : [S-hero Rollivery]
 
 ### STM32
 
-![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201105-2.png)
+![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201105-2.jpg)
 
 STM32F103. 디바이스마트에서 구입했다. Cube로 짜서 어떻게 굴려볼 계획이다.
 
@@ -43,7 +43,7 @@ STM32F103. 디바이스마트에서 구입했다. Cube로 짜서 어떻게 굴�
 
  내일 납땜하고 바로 테스트해봐야겠다. 아래는 구입한 모델들의 사진. 재밌겠다!
 
-![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201105-3.png)
+![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201105-3.jpg)
 
 
 
