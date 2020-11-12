@@ -19,13 +19,13 @@ tag : [arduino]
 
  아래는 일단 샀던 블루투스 모듈의 펌웨어 버전.(새로 산게 2.0-20100601, 이전에 있던 것이 MLT-BT05, V4.1)
 
- 좀 신기했던건, 새로 나온 HC05는 일반 통신모드와 AT Mode가 따로 있었다. 처음에 안되길래 뭔가 했더니, 버튼을 눌러주어야 동작하더라. 맨 위 그림을 보면 이름표가 붙지 않은 녀석은 우측 상단에 버튼이 하나있다. 전원을 넣기전에 이걸 누르고, 누르면서 전원을 넣으면 LED가 천천히 깜빡이면서 
+ 좀 신기했던건, 새로 나온 HC05는 일반 통신모드와 AT Mode가 따로 있었다. 처음에 안되길래 뭔가 했더니, 버튼을 눌러주어야 동작하더라. 맨 위 그림을 보면 이름표가 붙지 않은 녀석은 우측 상단에 버튼이 하나있다. 전원을 넣기전에 이걸 누르고, 누르면서 전원을 넣으면 LED가 천천히 깜빡이면서 AT mode로 들어가고, 이 때에 통신이 된다.
 
  여튼 현재 상황은 아래와 같다.
 
 ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201111-1.png)
 
- 위가 펌웨어 2.0-20100601 버전의 상태
+ 위가 펌웨어 2.0-20100601 버전의 상태. 명령어를 잘못치면 ERROR: (0)이 뜬다.
 
 ![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201111-2.png)
 
@@ -39,11 +39,11 @@ tag : [arduino]
 
 HC05, version = 2.0-20100601
 
-http://www.martyncurrey.com/hc-05-with-firmware-2-0-20100601/
+[http://www.martyncurrey.com/hc-05-with-firmware-2-0-20100601/](http://www.martyncurrey.com/hc-05-with-firmware-2-0-20100601/)
 
 HC05, version = MLT-BT05,V4.1
 
-https://blog.yavilevich.com/2017/03/mlt-bt05-ble-module-a-clone-of-a-clone/
+[https://blog.yavilevich.com/2017/03/mlt-bt05-ble-module-a-clone-of-a-clone/](https://blog.yavilevich.com/2017/03/mlt-bt05-ble-module-a-clone-of-a-clone/)
 
 HC05 - HC06 연결
 
@@ -57,10 +57,10 @@ HC05 - HC06 연결
 
 ![img4](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201111-5.png)
 
- 뚜껑을 따서 쓰는 방식. 뽑히지만 않는다면야....
+ 뚜껑을 따서 쓰는 방식. 뽑히지만 않는다면야.... 테스트해보니 잘 작동한다.
 
 
 
 ### 잡다한 이야기
 
- 내일은 모터드라이버 PCB에 납땜하고, USB Powermeter and HUB를 제작할 예정이다. 오전에 드론 몸체를 뽑을 예정이긴 한데, 아마 드론 제작은 파워미터 다 만들고 난 후에나 할 듯. 모터도 오긴 왔는데 체크는 나중에 할 예정이다.
+ 내일은 모터드라이버 PCB를 납땜하고, USB Powermeter and HUB를 제작할 예정이다. 오전에 드론 몸체를 뽑을 예정이긴 한데, 아마 드론 제작은 파워미터 다 만들고 난 후에나 할 듯. 모터도 오긴 왔는데 체크는 나중에 할 예정이다.
