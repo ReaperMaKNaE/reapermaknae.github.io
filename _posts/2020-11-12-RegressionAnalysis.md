@@ -3,7 +3,7 @@ layout : post
 title : "Regression Analysis를 이용한 야매 filter"
 date : 2020-11-12 +0900
 description : Filter using regression analysis
-img : 20201111-4.png
+img : 20201112-1.png
 tag : [math]
 ---
 
@@ -35,7 +35,7 @@ tag : [math]
 
  식을 증명하는 것은 여기저기 많으니, 생략하고 식만 보면 아래와 같이 된다.
 
- ![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201112-1.png)
+ ![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201112-2.png)
 
  A와 B는 각각 y=Ax+B이다.
 
