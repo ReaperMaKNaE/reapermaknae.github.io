@@ -1,48 +1,29 @@
-logo: # add logo name
-title: BLOG_ReaperMaKNaE
-description: > # this means to ignore newlines until "baseurl:"
-permalink: ':title/'
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://reapermaknae.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Jekyll configuration
 
-# Banner settings
-video: GetDistance.mp4  # add banner video. Add your video file to the folder video
-banner-title: # add banner title
-banner-desc: # add banner description
+name: Xixia
+description: Welcome to Xixia！
 
-# Author settings
-author-pic: jbi.jpg # your photo
-author-name: reapermaknae # your name
-about-author: student # about author
-email: reapermaknae@gmail.com # your email
-phone: 000-0000-0000 # your pnone number
-website: https://reapermaknae.github.io # you website
+# url is currently only used only for the RSS feed in feed.xml
+url: https://github.com/zxixia/jekyll-xixia
 
-# Social link
-google_url:    # add url link
-twitter_url:   # add url link
-instagram_url: # add url link
-pinterest_url: # add url link
-dribbble_url:  # add url link
-facebook_url:  # add url link
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: '/jekyll-xixia'
+## default date_format
+date_format: 
+  title: "%B-%-d-%Y"
+  archive: "%b"
+  categories: "%b-%Y"
+  tag: "%b-%Y"
+# Language
+lan: "en" 
 
-# Disqus
-discus_identifier: # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
+paginate: 10
 
-
-# Paginate
-paginate: 12
-paginate_path: /page:num/
-
-# Build settings
+highlighter: rouge
 markdown: kramdown
-plugins_dir:
-  - jekyll-paginate
-  - jekyll-sitemap
+gems: ['jekyll-paginate']
 
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-
-include: [_pages]
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+exclude: ['README.md', 'LICENSE', "*.bak"]

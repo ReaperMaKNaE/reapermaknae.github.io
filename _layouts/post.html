@@ -1,94 +1,92 @@
 ---
 layout: default
 ---
-{% include header.html %}
+{% assign trans = site.data.values[site.lan] %}
+<div class="well article">
+        <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
+        <span class="post-date">
+            {% assign date_format = site.date_format.title %}
+            {{ page.date | date: date_format }}
+        </span>
+        <hr style="border-top:1px solid #28323C;"/>
+    {% if site.comments and page.comments %}
+        {% if site.disqus != '' %}
+        <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
+        {% elsif site.isso != '' %}
+        <p class="author"><a href="{{ site.baseurl }}{{ page.url }}{{ site.isso_suffix }}#isso-thread">Comments</a></p>
+        {% endif %}
+    {% endif %}
+    <div class="post-content">
+    {{ content }}
+    <hr style="border-top:1px solid #28323C;"/>
 
-<main class="post_content">
-  <article class="post">
-    <header>
-      <div class="post_image">
-        <center>
-          <img src={{"/assets/img/" | prepend : site.baseurl | append : page.img}} alt="{{page.title}}">
-        </center>
-      </div>
-      <div class="post_description">
-        <p class="post_meta">{{page.date | date: '%Y, %b %d'}}</p>
-        <h1 class="post_title">{{page.title}}</h1>
-      </div>
-    </header> <!-- End Header -->
-
-    <div class="entry_content">
-      {{page.content | markdownify}}
-    </div>
-    
-    <div class="post_wrapper">
-      <footer class="post_footer cf">
-        <div class="post_share">
-          <span>Share:</span>
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-        </div>
-        <div class="post_tag">
-          <span>Tags:</span>
-          {% for tag in page.tags %}
-          <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }}</a>
-          {% endfor %}
-        </div>
-      </footer>
-    </div>
-  </article> <!-- End Section Post -->
-
-  <section class="author cf">
-    <div class="post_wrapper">
-      <div class="author_image">
-        <img src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{ site.author-pic }}{% endif %}" alt="Author face">
-      </div>
-      <div class="author_info">
-        <h2 class="author_title">{% if site.author-name %}{{site.author-name}}{% else %}Dwayne Newman{% endif %}</h2>
-        <p class="author_subtitle">{% if site.about-author %}{{site.about-author}}{% else %}La croix godard blue bottle, vape iceland fingerstache cronut single-origin coffee lyft snackwave normcore small batch.{% endif %}</p>
-        <div class="author_social">
-          {% if site.email %}
-          <span class="author_email"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></span>
-          {% else %}
-          <span class="author_email"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:dwayne@example.com">dwayne@example.com</a></span>
-          {% endif %}
-          
-          {% if site.phone %}
-          <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{site.phone}}">{{site.phone}}</a></span>
-          {% else %}
-          <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+496-169-65-57">(496)-169-6557</a></span>
-          {% endif %}
-
-          {% if site.website %}
-          <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{site.website}}" target="_blank">{{site.website}}</a></span>
-          {% else %}
-          <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank">https://dwayne.example.com</a></span>
-          {% endif %}            
-        </div>
-      </div>
-    </div>
-  </section> <!-- End Section Author -->
-
-  <section class="recent_box">
-    <div class="post_wrapper">
-      <h2 class="recent_title">Recent post</h2>
-      <div class="recent_list">
-        {% for post in site.posts offset:0 limit:6 %}
-          {% if post.title %}
-            <a href="{{ post.url | prepend: site.baseurl }}"
-              class="recent_item"
-              style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
-                <span>{{ post.title }}</span>
-            </a>
-          {% endif %}
+    <!-- tags and categories under post -->
+    {% unless page.categories == empty %}
+    <ul class="list-unstyled list-inline">
+      <li><i class="icon-folder-open"></i></li>
+      {% assign categories_list = page.categories %}
+      {% if categories_list.first[0] == null %}
+        {% for category in categories_list %} 
+            <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
+                {{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
+                {% unless forloop.last %},{% endunless %}
+            </a></li>
         {% endfor %}
-      </div>
-    </div>
-  </section> <!-- End Section Recent Box -->
-  
-  {% include disqus.html %}
-  
-</main> <!-- End Section Post Content -->
+      {% else %}
+        {% for category in categories_list %} 
+            <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
+                {{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
+            </a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+    {% endunless %}  
 
-{% include footer.html %}
+    {% unless page.tags == empty %}
+    <ul class="list-unstyled list-inline">
+      <li><i class="icon-tags"></i></li>
+      {% assign tags_list = page.tags %}
+      {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %} 
+            <li class="icon-style">
+                <a href="{{ site.baseurl }}/tags.html">
+                {{ tag }} <span>({{ site.tags[tag].size }})</span>
+                {% unless forloop.last %},{% endunless %}
+                </a>
+            </li>
+        {% endfor %}
+      {% else %}
+        {% for tag in tags_list %} 
+            <li class="icon-style">
+                <a href="{{ site.baseurl }}/tags.html">
+                    {{ tag[0] }} <span>({{ tag[1].size }})</span>
+                    {% unless forloop.last %},{% endunless %}
+                </a>
+            </li>
+           
+        {% endfor %}
+      {% endif %}
+      {% assign tags_list = nil %}
+    </ul>
+    {% endunless %}  
+
+    </div>
+    {% if page.comments %}
+        {% if site.disqus != '' %}
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+        {% elsif site.isso != '' %}
+        <section id="isso-thread"></section>
+        {% endif %}
+    {% endif %}
+</div>
+<div class="pagination">
+    {% if page.next %}
+    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">{{ trans.newer_post }}</a>
+    {% endif %}
+    {% if page.previous %}
+    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">{{ trans.older_post }}</a>
+    {% endif %}
+</div>

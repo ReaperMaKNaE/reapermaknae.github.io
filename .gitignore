@@ -1,8 +1,7 @@
-_site
+*Thumbs.db
+.bundle
 .sass-cache
-.jekyll-metadata
-node_modules/
-yarn.lock
-_posts/.~2020-11-03-SimpleCheck.md
-assets/img/UploadImage.pptx
-assets/img/~$UploadImage.pptx
+Gemfile.lock
+_site
+*.gem
+*.bak
