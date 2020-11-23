@@ -65,9 +65,11 @@ tag : [blog]
 
  그리고 h3의 글자 크기가 이상하길래 홈페이지에서 f12눌러보니 이 theme를 만들었던 분이 고의로 글자크기를 줄여놨다.
 
- 그래서 아래와 같이 다 주석을 때려버리고 넘기니 원래대로 돌아와서 만족하고 있는 상태.
+ 그래서 아래와 같이 일부 주석을 때려버리고 넘기니 원래대로 돌아와서 만족하고 있는 상태.
 
  참고로 h3의 원래 font size는 1.75rem.
+
+ h1과 h2를 남겨둔 이유는, theme에서 몇몇 작업을 할 때 h1과 h2를 theme에 맞춘다고 일부러 줄인 것 같다. 난 어짜피 이 post내부의 contents에서는 h3만을 주로 사용하기때문에 다른 것들은 별 필요없다고 생각해서 이와 같이 처리.
 
 ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-2.png)
 
