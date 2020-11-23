@@ -8,7 +8,7 @@ url: http://reapermaknae.github.io
 #url: http://localhost:4000
 
 # For a project page here should be a project name. Otherwise (for user's/organization's page leave it empty)
-baseurl: 'ReaperMaKNaE/reapermaknae.github.io'
+baseurl: 'https://github.com/reapermaknae/reapermaknae.github.io'
 
 author: Pavel Makhov
 copyright: 2015-2018
