@@ -1,7 +1,4 @@
-*Thumbs.db
-.bundle
-.sass-cache
-Gemfile.lock
+_cache
 _site
-*.gem
-*.bak
+.idea/
+.jekyll-cache
