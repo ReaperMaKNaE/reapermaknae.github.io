@@ -57,11 +57,17 @@ tag : [blog]
 
 
 
-### 이미지 가운데 정렬
+### 이미지 가운데 정렬, 글자 크기 조정
 
  분명 가운데 정렬이 되어야하는데 안되길래 뭐지?? 했는데, inline-block의 문제였다.
 
  theme의 css에서 inline-block을 block으로 변경하니 해결이 되었다.
+
+ 그리고 h3의 글자 크기가 이상하길래 홈페이지에서 f12눌러보니 이 theme를 만들었던 분이 고의로 글자크기를 줄여놨다.
+
+ 그래서 아래와 같이 다 주석을 때려버리고 넘기니 원래대로 돌아와서 만족하고 있는 상태.
+
+ 참고로 h3의 원래 font size는 1.75rem.
 
 ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-2.png)
 

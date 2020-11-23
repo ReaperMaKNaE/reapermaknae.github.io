@@ -4,7 +4,7 @@ title : "[S-hero Rollivery]opencv 물체 판별 확인을 위한 준비와 과�
 date : 2020-10-24 20:26:00 +0900
 description : object detection using opencv
 img : 20201024-5.jpg
-tag : [ComputerVision, ObjectDetection, S-hero Rollivery]
+tag : [ComputerVision, S-hero Rollivery]
 ---
 
 ## Algorithm
