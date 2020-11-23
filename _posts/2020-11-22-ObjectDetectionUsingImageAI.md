@@ -67,7 +67,7 @@ __*pip install protobuf==3.6.0*__
 
  마찬가지로 영상에도 적용이 가능하다.
 
- 영상에 적용하려면, 일단 [OlafenwaMoses](https://github.com/OlafenwaMoses)/ImageAI 에서 다음 링크를 눌러 확인했을 때, 마크다운 문서로 작성된 내용 중에서 RetinaNet을 다운받는다.
+ 영상에 적용하려면, 일단 OlafenwaMoses/ImageAI 에서 다음 링크를 눌러 확인했을 때, 마크다운 문서로 작성된 내용 중에서 RetinaNet을 다운받는다.
 
 [https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/VIDEO.md](https://github.com/OlafenwaMoses/ImageAI/blob/master/imageai/Detection/VIDEO.md)
 
@@ -98,7 +98,7 @@ print(video_path)
 
  다 되면 위와 같이 링크가 뜬다!
 
- 프레임의 경우 20프레임으로 설정했는데, 보통 대부분 파일의 우클릭 설정에서 원본의 프레임을 확인할 수 있다. 이 프레임을 맞춰주면 똑같은 길이의 영상을 선택할 수 있으니, 위 코드에서
+ 프레임의 경우 24프레임으로 설정했는데, 보통 대부분 파일의 우클릭 설정에서 원본의 프레임을 확인할 수 있다. 이 프레임을 맞춰주면 똑같은 길이의 영상을 선택할 수 있으니, 위 코드에서
 
 __*frames_per_second=24*__ 
 

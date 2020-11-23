@@ -54,3 +54,15 @@ tag : [blog]
 ![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-1.png)
 
  기존에 social이나 disqus같은 것들은 내가 다 의미없다고 생각하는 것들이라 다 삭-제 했다. 또 뭐 지울거 없는지는 추후 조금씩 업데이트 예정.
+
+
+
+### 이미지 가운데 정렬
+
+ 분명 가운데 정렬이 되어야하는데 안되길래 뭐지?? 했는데, inline-block의 문제였다.
+
+ theme의 css에서 inline-block을 block으로 변경하니 해결이 되었다.
+
+![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-2.png)
+
+ 후! 이제 어느정도 할 걸 끝냈다!

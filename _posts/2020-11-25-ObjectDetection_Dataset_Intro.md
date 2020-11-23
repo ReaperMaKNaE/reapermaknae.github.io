@@ -3,7 +3,6 @@ layout : post
 title : "Object Detection Dataset 정리"
 date : 2020-11-24 +0900
 description : Object Detection
-img : 20201124-1.jpg
 tag : [ComputerVision]
 ---
 
@@ -33,7 +32,7 @@ __*conda install pytorch torchvision cpuonly -c pytorch*__
 
  아래는 위 과정을 마친 후 conda list를 했을 때 나오는 패키지들.
 
-![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201123-1.jpg)
+![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-3.jpg)
 
 (vscode의 경우 처음에는 ctrl+shift+p를 누른 후 select interpreter로 경로를 찾아주고 pylint를 설치해야 아마도 제대로 될 가능성이 높다. interpreter를 제대로 설정했고, __*activate 가상환경 이름*__ 을 잘 했는지 확인)
 

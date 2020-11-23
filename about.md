@@ -1,18 +1,19 @@
 ---
 layout: page 
 title: About
-
 ---
 
-# History
-![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/jbi.jpg)
+<h2><center>History</center></h2>
 
-2014~2016, 2018~2020
+![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/jbi_About.png)
 
-Korea, Republic of
+<center>2014~2016, 2018~2020</center>
 
-Sungkyunkwan Univ
+<center>Korea, Republic of</center>
 
-Department of Electrical and Electronic Engineering
+<center>Sungkyunkwan Univ</center>
 
-Department of Mechanical Engineering
+<center>Department of Electrical and Electronic Engineering</center>
+
+<center>Department of Mechanical Engineering</center>
+
