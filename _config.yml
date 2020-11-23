@@ -4,11 +4,11 @@ name: ReaperMaKNaE
 description: Engineer
 
 # Url is currently only used only for the RSS feed in feed.xml
-url: http://reapermaknae.github.io
+url: 
 #url: http://localhost:4000
 
 # For a project page here should be a project name. Otherwise (for user's/organization's page leave it empty)
-baseurl: 'https://github.com/reapermaknae/reapermaknae.github.io'
+baseurl: 'https://github.com/ReaperMaKNaE/reapermaknae.github.io'
 
 author: Pavel Makhov
 copyright: 2015-2018
