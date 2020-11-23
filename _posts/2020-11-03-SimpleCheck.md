@@ -1,10 +1,10 @@
 ---
 layout : post
-title : "[S-hero Rollivery] Data 전송 확인 및 연구실 환경 확인, WSL2"
+title : "[S-hero Rollivery] Data 전송 확인 및 연구실 환경 확인, WSL"
 date : 2020-11-03 +0900
-description : S-hero Rollivery, WSL2
+description : S-hero Rollivery, WSL
 img : 20201103-4.png
-tag : [S-hero Rollivery]
+tag : [S-hero Rollivery, RPi]
 ---
 
  ### Data 전송 확인 및 연구실 환경 확인

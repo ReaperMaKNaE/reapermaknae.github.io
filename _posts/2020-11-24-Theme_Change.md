@@ -3,7 +3,7 @@ layout : post
 title : "블로그 테마 변경 - Jekyll dark theme"
 date : 2020-11-24 +0900
 description : Zekyll theme change
-tag : [Theme]
+tag : [blog]
 ---
 
 ### Zekyll Dark Theme

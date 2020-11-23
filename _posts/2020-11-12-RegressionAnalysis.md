@@ -4,7 +4,7 @@ title : "Regression Analysis를 이용한 야매 filter"
 date : 2020-11-12 +0900
 description : Filter using regression analysis
 img : 20201112-1.png
-tag : [math]
+tag : [Algorithm]
 ---
 
 ### Regression analysis

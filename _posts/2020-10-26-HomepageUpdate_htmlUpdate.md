@@ -4,7 +4,7 @@ title : "홈페이지 댓글창 추가"
 date : 2020-10-26 20:26:00 +0900
 description : blog update
 img : 20201026-1.jpg
-tag : [blog, utterance]
+tag : [blog]
 ---
 
 ###  Blog Update - Utterance 추가

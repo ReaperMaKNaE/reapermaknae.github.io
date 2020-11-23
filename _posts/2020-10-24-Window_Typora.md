@@ -4,7 +4,7 @@ title : "Typora Test for github"
 date : 2020-10-24 09:26:00 +0900
 description : typora test
 img : 20201024-3.jpg
-tag : [Typora, Introduction]
+tag : [blog]
 ---
 
 ## Typora 설치

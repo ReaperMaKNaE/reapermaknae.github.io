@@ -4,7 +4,7 @@ title : "[S-hero Rollivery] RaspberryPI 통신 확인"
 date : 2020-10-27 +0900
 description : check raspberryPI communication
 img : 20201027-1.jpg
-tag : [S-hero Rollivery]
+tag : [S-hero Rollivery, RPi]
 ---
 
 ### RaspberryPI Update

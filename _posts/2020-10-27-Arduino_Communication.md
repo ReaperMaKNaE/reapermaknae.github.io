@@ -4,7 +4,7 @@ title : "[S-hero Rollivery] Arduino 통신 확인"
 date : 2020-10-27 +0900
 description : check arduino communication
 img : 20201027-4.jpg
-tag : [S-hero Rollivery]
+tag : [S-hero Rollivery, arduino]
 ---
 
 ### Arduino Update
