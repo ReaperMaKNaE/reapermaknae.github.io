@@ -2,12 +2,9 @@
 layout : post
 title : "에라토스테네스의 체, 베르트랑 공준, 골드바흐의 추측"
 date : 2020-11-23 +0900
-description : Mathmatics
-img : 20201123-1.png
+description : Mathmatics Algorithm for Prime number
 tag : [Algorithm]
 ---
-
-### Object Detection Dataset
 
 ### 에라토스테네스의 체, 베르트랑 공준, 골드바흐의 추측
 
