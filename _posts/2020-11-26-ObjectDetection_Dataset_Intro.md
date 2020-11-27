@@ -50,7 +50,7 @@ __*conda install git cython*__
 
 
 
-![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-3.jpg)
+![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-3.png)
 
 (vscode의 경우 처음에는 ctrl+shift+p를 누른 후 select interpreter로 경로를 찾아주고 pylint를 설치해야 아마도 제대로 될 가능성이 높다. interpreter를 제대로 설정했고, __*activate 가상환경 이름*__ 을 잘 했는지 확인)
 
@@ -76,7 +76,7 @@ __*Error loading OSError: [WinError 127] "C:\Users\82104\anaconda3\envs\torchvis
 
  다른 것으로는 
 
-![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201126-1.jpg)
+![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201126-1.png)
 
  references/detection/engine.py, utils.py, transforms.py를 받으라는데, 내가 받은 파일들 내에선 이러한 것들이 없었다. 그래서 어디서 받으란거지? 했는데, 다행히 아래 파이토치 discuss에서 찾을 수 있었다.
 
