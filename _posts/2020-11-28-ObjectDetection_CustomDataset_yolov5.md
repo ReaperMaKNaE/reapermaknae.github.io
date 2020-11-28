@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "YoloV5와 Colab을 이용해서 Custom Dataset Object Detection 하기"
+title : "YoloV5와 Colab을 이용해서 Custom Dataset Object Detection 하기[실패]"
 date : 2020-11-28 +0900
 description : Object Detection
 tag : [ComputerVision]
@@ -199,7 +199,7 @@ for k in range(len(wrongClassLabelList)):
 
  흠... loss가 제일 적은게 너였는데...
 
- 여튼 며번 더 굴려봤는데, 결과가 참담한건 매나 마찬가지였다.
+ 여튼 몇번 더 굴려봤는데, 결과가 참담한건 매나 마찬가지였다.
 
  영상으로 딱 찍어서 내 toolbox안의 나노/우노/파이제로를 잡아주는 걸 기대했는데, 아무래도 좀 공부를 더 해야겠다. yolo에 대한 근본적인 공부부터 한번 해보자.
 

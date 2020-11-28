@@ -74,3 +74,55 @@ tag : [blog]
 ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201124-2.png)
 
  후! 이제 어느정도 할 걸 끝냈다!
+
+
+
+### 영상 추가
+
+ 유튜브영상을 깔끔하게 추가하는 방법을 알아내었다. 아래 블로그를 참조했다.
+
+[https://seanlion.github.io/blog/4](https://seanlion.github.io/blog/4)
+
+
+
+![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201129-6.png)
+
+```python
+<iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+```
+
+위와 같은 코드를 내 repo 안의 _includes/video.html 이란 새로 만든 파일 안에 넣었다.
+
+즉, 예로 들면 나의 경우는 reapermaknae.githu.bio/_includes/video.html
+
+
+
+그리고, 
+
+```html
+  {% include 파일명.html id="유튜브동영상url" %}  
+```
+
+ 위와 같은 형태를 그냥 마크다운 문서에 적으면?
+
+
+
+{% include video.html id="ArkGXvMsCx8" %}
+
+
+
+나의 경우는 이렇게 적었다. 영상이지만, 마크다운 문서 내에서는 이렇게 보인다.
+
+
+
+![img7](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201129-7.png)
+
+
+
+
+
+
+
+### Reference
+
+영상 추가, [https://seanlion.github.io/blog/4](https://seanlion.github.io/blog/4)
