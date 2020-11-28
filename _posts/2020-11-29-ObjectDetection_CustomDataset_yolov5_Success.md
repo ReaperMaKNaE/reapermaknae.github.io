@@ -44,7 +44,7 @@ tag : [ComputerVision]
 
  이정도면 충분하겠지? 하고 바로 테스트영상을 넣어봤다.
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/LnmDRXNdUCo' frameborder='0' allowfullscreen></iframe></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
 
  [약 20초 정도의 길이로, 재생이 안된다면 이 문장을 누르면 영상을 볼 수 있다.](https://youtu.be/LnmDRXNdUCo)
 

@@ -81,30 +81,20 @@ tag : [blog]
 
  유튜브영상을 깔끔하게 추가하는 방법을 알아내었다. 아래 블로그를 참조했다.
 
-[http://www.halryang.net/embed-youtube-responsively/](http://www.halryang.net/embed-youtube-responsively/)
+[https://devlog.jwgo.kr/2018/04/16/how-to-insert-youtube-into-jekyll/](https://devlog.jwgo.kr/2018/04/16/how-to-insert-youtube-into-jekyll/)
 
 
 
 ```html
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/{영상추가주소}' frameborder='0' allowfullscreen></iframe></div> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ArkGXvMsCx8" frameborder="0" allowfullscreen></iframe>
 ```
 
  위와 같은 형태를 그냥 마크다운 문서에 적으면?
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/ArkGXvMsCx8' frameborder='0' allowfullscreen></iframe></div>
-
-
-
-나의 경우는 이렇게 적었다. 영상이지만, 마크다운 문서 내에서는 이렇게 보인다.
-
-
-
-![img7](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20201129-7.png)
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ArkGXvMsCx8" frameborder="0" allowfullscreen></iframe>
 
 
 
 ### Reference
 
-영상 추가, [http://www.halryang.net/embed-youtube-responsively/](http://www.halryang.net/embed-youtube-responsively/)
+영상 추가, [https://devlog.jwgo.kr/2018/04/16/how-to-insert-youtube-into-jekyll/](https://devlog.jwgo.kr/2018/04/16/how-to-insert-youtube-into-jekyll/)
