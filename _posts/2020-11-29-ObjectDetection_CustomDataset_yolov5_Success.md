@@ -46,7 +46,7 @@ tag : [ComputerVision]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
 
- [약 20초 정도의 길이로, 재생이 안된다면 이 문장을 누르면 영상을 볼 수 있다.](https://youtu.be/LnmDRXNdUCo)
+
 
  예전에 450프레임? 정도 짜리 영상을 ImageAI를 이용해서 내 노트북에서 할 때 거의 한시간 가까이 걸렸는데, 코랩 GPU를 쓰니까 10초컷이다. 
 

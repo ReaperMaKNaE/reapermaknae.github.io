@@ -110,7 +110,7 @@ __*frames_per_second=24*__
 
  그리고 object detection의 결과의 링크.
 
- [영상을 보려면 이 글을 누르면 된다.](https://youtu.be/vuaI_eMFSuM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vuaI_eMFSuM" frameborder="0" allowfullscreen></iframe>
 
  나름 잘 잡아오는 걸 확인할 수 있다.
 

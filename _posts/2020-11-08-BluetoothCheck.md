@@ -57,7 +57,9 @@ tag : [arduino]
 
  대충 회로 짜서 확인해보니 연결이 안되는 것 같다. 아무래도 하나가 문제가 좀 있는 듯. 나중에 Rollivery에 썼던 거를 들고와서 확인해 봐야겠다.
 
-  [이 영상은 페어링이 안되는 상태.](https://youtu.be/6XpvgjyXpHA)(좀 찾아보니 기다리면 알아서 된다는데, 아무래도 버전도 서로 다르다보니 통신이 안되는 것 같다.)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6XpvgjyXpHA" frameborder="0" allowfullscreen></iframe>
+
+좀 찾아보니 기다리면 알아서 된다는데, 아무래도 버전도 서로 다르다보니 통신이 안되는 것 같다.
 
  물론 그전에 마킹을 해놓는 것은 잊지말자. 언젠간 쓰일수도 있으니. 그래도 수신은 되긴하니까 아마 나중에 어플같은거 만들어서 쓸 땐 쓸모가 있을 수도 있다.
 

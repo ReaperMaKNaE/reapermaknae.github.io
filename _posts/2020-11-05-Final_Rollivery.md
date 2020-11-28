@@ -11,7 +11,7 @@ tag : [S-hero Rollivery]
 
  S-Hero 제출을 위해 팀원 한명을 제외하고(현재 다른 캠퍼스에서 복수전공으로 인해 참여불가) 모여서 마지막 영상을 촬영한 후, 제출용 영상을 제작했다.
 
- [그 영상은 여기를 클릭하면 볼 수 있다.](https://youtu.be/Z6FvZ3U1rx0)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z6FvZ3U1rx0" frameborder="0" allowfullscreen></iframe>
 
 
 

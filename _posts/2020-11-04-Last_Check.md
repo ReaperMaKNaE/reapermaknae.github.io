@@ -33,9 +33,9 @@ tag : [S-hero Rollivery]
 
  일단 영상도 몇개 찍었다.
 
-[실시간이 가능한지 테스트하는 영상__*~~(물론 실시간 불가능)~~*__](https://youtu.be/ReVDfVB8QLk)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ReVDfVB8QLk" frameborder="0" allowfullscreen></iframe>
 
-[간단한 전후진](https://youtu.be/6fNOSDpJyQk)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6fNOSDpJyQk" frameborder="0" allowfullscreen></iframe>
 
 
 

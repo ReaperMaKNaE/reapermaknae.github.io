@@ -43,7 +43,9 @@ tag : [Algorithm]
 
  라고 한다면, 아래와 같이 써먹을 수 있다.
 
-[Regression analysis를 응용하여 만든 filter를 MPU6050에 적용한 사례(Roll각)](https://youtu.be/P6Vs73NxRJc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P6Vs73NxRJc" frameborder="0" allowfullscreen></iframe>
+
+
 
  위 영상은 Rollivery에서 사용했던 데이터이다. 모두 똑같은 데이터로, regression analysis를 이용해 만든 filter(이하 regression filter)에서, 몇개의 데이터를 기준으로(이하 sample 개수) regression analysis를 적용하면 그 결과가 어떻게 되는지 보여준다.
 
