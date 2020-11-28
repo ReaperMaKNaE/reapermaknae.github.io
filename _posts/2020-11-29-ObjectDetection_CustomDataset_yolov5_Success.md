@@ -44,7 +44,9 @@ tag : [ComputerVision]
 
  이정도면 충분하겠지? 하고 바로 테스트영상을 넣어봤다.
 
- [약 20초 정도의 길이로, 이 문장을 누르면 영상을 볼 수 있다.](https://youtu.be/LnmDRXNdUCo)
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/LnmDRXNdUCo' frameborder='0' allowfullscreen></iframe></div>
+
+ [약 20초 정도의 길이로, 재생이 안된다면 이 문장을 누르면 영상을 볼 수 있다.](https://youtu.be/LnmDRXNdUCo)
 
  예전에 450프레임? 정도 짜리 영상을 ImageAI를 이용해서 내 노트북에서 할 때 거의 한시간 가까이 걸렸는데, 코랩 GPU를 쓰니까 10초컷이다. 
 
