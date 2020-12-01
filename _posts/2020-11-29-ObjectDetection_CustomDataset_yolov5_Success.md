@@ -1,7 +1,7 @@
 ---
 layout : post
 title : "YoloV5와 Colab을 이용해서 Custom Dataset Object Detection 하기[성공]"
-date : 2020-11-28 +0900
+date : 2020-11-29 +0900
 description : Object Detection
 tag : [ComputerVision]
 ---
@@ -44,7 +44,7 @@ tag : [ComputerVision]
 
  이정도면 충분하겠지? 하고 바로 테스트영상을 넣어봤다.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
+<iframe width=100% height=315 src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
 
 
 
