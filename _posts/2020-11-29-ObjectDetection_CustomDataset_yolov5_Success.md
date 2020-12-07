@@ -44,7 +44,7 @@ tag : [ComputerVision]
 
  이정도면 충분하겠지? 하고 바로 테스트영상을 넣어봤다.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/LnmDRXNdUCo" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -59,13 +59,3 @@ tag : [ComputerVision]
  사진이 100장 겨우 넘는데도 성능이 이 정도라서 좀 놀랐다.
 
  영상에서 박스를 열 때 라즈베리파이 제로 옆에 NANO가 있다고 우기긴 하는데, 사실 프로 미니다. 저건 학습을 안시켜줬으니 헷갈릴만도 하지. 애초에 비슷하게 생기기도 했다.
-
-
-
-### YoloV5 이해하기
-
-
-
- 이건 아마도 며칠동안 계속 좀 볼 것 같은데, 아무튼 코드를 보자.
-
-(작성중)

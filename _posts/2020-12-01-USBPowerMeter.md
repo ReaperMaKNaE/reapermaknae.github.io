@@ -217,7 +217,7 @@ void loop() {
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OF3SSSf7ucY" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/OF3SSSf7ucY" frameborder="0" allowfullscreen></iframe>
 
  썩 마음에 들진 않아서 나중에 다시 만들 거지만, 일단 여기서 마무리.
 
