@@ -14,7 +14,7 @@ tag : [Arduino]
 
  일단 자세히 보니, regulator부분이 고장난 것을 확인할 수 있었다.
 
- 다른건 아니고, 우노를 자세히 살펴보니 불룩 튀어나와있었다.
+ 다른건 아니고, 우노를 자세히 살펴보니 불룩 튀어나와있었다.(아래 사진의 붉은색 상자 부분)
 
  그래서 열심히 페이스트발라서 뗐다.
 
@@ -22,7 +22,11 @@ tag : [Arduino]
 
  페이스트 발라서 떼긴 뗐는데, 항상 조심하자. 힘으로 땡기다가 손에 핀셋을 박아넣는 바람에 후시딘을 사버렸다.
 
- 아무튼 다 떼고 나면, 구입한 ASM1117을 새걸로 교체했다. 구입은 아래 링크.
+ original arduino uno의 경우, 위 레귤레이터의 이름은 MC33269D인데, 내가 지금 사용하고 있는게 중국산이라 그런지 AMS1117이라는 module을 사용하고 있었다.
+
+(original aruduino uno datasheet : [https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf](https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf))
+
+ 그래서 AMS1117을 구입하고, 새걸로 교체했다. 구입은 아래 링크.
 
 AMS1117, [https://www.devicemart.co.kr/goods/view?no=1321255](https://www.devicemart.co.kr/goods/view?no=1321255)
 
