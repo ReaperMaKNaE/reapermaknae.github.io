@@ -2,7 +2,7 @@
 layout : post
 title : "논문 읽기 - Segment2Regress: Monocular 3D Vehicle Localization in Two Stages"
 date : 2020-12-04 +0900
-description : Review
+description : Segment2Regress 논문을 간단하게 리뷰한 포스팅입니다.
 tag : [PaperReview]
 ---
 

@@ -2,7 +2,7 @@
 layout : post
 title : "YoloV5와 Colab을 이용해서 Object Detection 하기"
 date : 2020-11-27 +0900
-description : Object Detection
+description : YoloV5와 Colab을 이용해 간단한 object detection을 구현하였습니다.
 tag : [ComputerVision]
 ---
 

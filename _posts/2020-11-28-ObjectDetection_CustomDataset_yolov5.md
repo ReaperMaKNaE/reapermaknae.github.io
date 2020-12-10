@@ -2,7 +2,7 @@
 layout : post
 title : "YoloV5와 Colab을 이용해서 Custom Dataset Object Detection 하기[실패]"
 date : 2020-11-28 +0900
-description : Object Detection
+description : YoloV5와 Colab을 이용해 Object Detection을 실패한 결과를 담은 포스팅입니다.
 tag : [ComputerVision]
 ---
 

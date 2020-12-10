@@ -2,7 +2,7 @@
 layout : post
 title : "Object Detection Dataset 정리"
 date : 2020-11-26 +0900
-description : Object Detection
+description : Object Detection을 입문하며 헤맷던 내용의 기록용 포스팅입니다.
 tag : [ComputerVision]
 ---
 
