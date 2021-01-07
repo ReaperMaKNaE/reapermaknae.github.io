@@ -17,3 +17,6 @@ title: About
 
 <center>Department of Mechanical Engineering</center>
 
+
+
+I'm interested in Computer Vision with Machine Learning, especially 3D reconstruction, SLAM, Pose Estimation etc.
