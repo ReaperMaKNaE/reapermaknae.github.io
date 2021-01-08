@@ -3,7 +3,7 @@ layout : post
 title : "역전압으로 죽은 아두이노 우노 살려보기"
 date : 2020-12-10 +0900
 description : 고장난 AMS1117 교체하여 Arduino Uno를 살린 포스팅입니다.
-tag : [Arduino]
+tag : [arduino]
 ---
 
 ### AMS1117 교체
