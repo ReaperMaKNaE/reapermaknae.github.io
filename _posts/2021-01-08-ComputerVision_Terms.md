@@ -80,6 +80,120 @@ Murez, Zak, et al. "Atlas: End-to-End 3D Scene Reconstruction from Posed Images.
 
 
 
+### Interpolation
+
+ 한국어로는 보간법이라고 하는데, 보통 사용하는 linear interpolation은 두 점을 잇는 선을 긋고, 그 선 위에 있는 점의 값이 얼마인가를 알아내는 방법.
+
+ 이를 확장해서 bilinear interpolation, trilinear interpolation등이 나오고 있음.
+
+ 아래 위키피디아 참조.
+
+[https://en.wikipedia.org/wiki/Interpolation](https://en.wikipedia.org/wiki/Interpolation)
+
+
+
+### Bilateral filter
+
+ 뜬금없이 얘만 쓰이는 것은 아니고, Guidance Filter와 같이 쓰일 수 있는데, 일단 bilateral filter는 gaussian value를 중심으로, pixel의 intensify를 주변 pixel과 대충 비슷하게 만들어주는 역할을 함.
+
+ 홍석쓰님 께서 작성하신 포스팅을 참조.
+
+[https://redstarhong.tistory.com/57](https://redstarhong.tistory.com/57)
+
+
+
+### SGM(Semi Global Matching)
+
+ Hirschmuller가 발표한 내용으로, rectified stereo image pair(calibration 되어 있는 image pair를 의미)에서 dense disparity map을 estimation할 수 있는 computer vision algorithm이다.
+
+ 이는 GA Net을 참조하거나, 아래 위키피디아 링크를 참조.
+
+[https://en.wikipedia.org/wiki/Semi-global_matching](https://en.wikipedia.org/wiki/Semi-global_matching)
+
+
+
+### Dilated Convolution
+
+ 사진의 크기를 키우는 것에 있어서 여러 방법이 있는데, upsampling을 하면서 값을 1개만 그대로 따오고 나머지는 다 0으로 채우는 방법을 의미한다. 이걸 왜 쓰냐? 할 수 도있는데, 어쨌든 receptive field를 늘리고 대부분의 weight가 0이라서 연산능력이 좀 좋아진다는 뜻.
+
+ sparse 하게 만든다고 해야하나? 그거와 비슷하다.
+
+
+
+### PnP Algorithm
+
+ Perspective - n - Point Algorithm.
+
+ n개의 3D Point들을 여러 위치에 놓인 카메라로 찰칵 찰칵 하고 찍었을 때, 사진들을 비교해서 카메라의 위치(pose)를 estimation할 수 있는 알고리즘이다.
+
+ 보통 n은 3이면 되나, 이게 이론적인 수치고, 실제 카메라로 찍었을 때에는 intrinsic이라던지 extrinsic noise가 존재할 수 있기 때문에 아다리 맞게 잘 되진 않는다. 여기에 대한 error를 cost로 줘서 어떻게 줄였는가에 대해서는 많은 연구가 이루어졌었다.
+
+ 물론 자세한 것은 위키피디아 참조.
+
+[https://en.wikipedia.org/wiki/Perspective-n-Point](https://en.wikipedia.org/wiki/Perspective-n-Point)
+
+
+
+### 이 외 참고하면 좋은 논문
+
+
+
+__Batch Normalization__ :
+
+Ioffe, Sergey, and Christian Szegedy. "Batch normalization: Accelerating deep network training by reducing internal covariate shift." *arXiv preprint arXiv:1502.03167* (2015).
+
+
+
+__A taxonomy and evaluation of dense two frame stereo correspondence algorithm__
+
+어떤 algorithm들이 stereo matching에서 사용되었는지에 대해 정리해준 논문.
+
+Scharstein, Daniel, and Richard Szeliski. "A taxonomy and evaluation of dense two-frame stereo correspondence algorithms." *International journal of computer vision* 47.1-3 (2002): 7-42.
+
+
+
+__Efficient deep learning for stereo matching__
+
+stereo matching에서 어떤 방식이 효율적인가 를 연구한 논문. MRF(Markov Random field)라던지, bilateral filter등이 소개됨.
+
+Luo, Wenjie, Alexander G. Schwing, and Raquel Urtasun. "Efficient deep learning for stereo matching." *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*. 2016.
+
+
+
+__A space sweep approach to true-multi-image matching__
+
+DPSNet에서 사용된 기법의 근원은 이 논문임. 현재(2021년 01월) 기준으로, 비교적 최근에 나온 논문들은 space sweep에 대해서 상당히 좋은 평가를 하고 있음.
+
+Collins, Robert T. "A space-sweep approach to true multi-image matching." *Proceedings CVPR IEEE Computer Society Conference on Computer Vision and Pattern Recognition*. IEEE, 1996.
+
+
+
+__Introduction to camera pose estimation with deep learning__ 
+
+ Pose Estimation을 machine learning으로 접근한 논문들을 분석해놓은 논문.
+
+Shavit, Yoli, and Ron Ferens. "Introduction to camera pose estimation with deep learning." *arXiv preprint arXiv:1907.05272* (2019).
+
+
+
+__Computing the stereo matching cost with a convolutional neural network__
+
+Stereo image에서 어떻게 cost를 계산하는지에 대한 내용이 실려져있음. cost에 대한 개념을 잡으려면 해당 논문을 읽어보는 것도 좋음. CBCA가 여기에서 소개되기도 함.
+
+Zbontar, Jure, and Yann LeCun. "Computing the stereo matching cost with a convolutional neural network." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015.
+
+
+
+그런데 위 논문을 읽으려니 무슨 이해안되는 것이 나온다. CBCA??
+
+__Cross-Based Local Stereo Matching Using Orthogonal Integral Images__
+
+이 논문을 읽으면 된다. 사실 지금(2021년 01월)은 GCNet에서 cost volume이란게 나오고 나서 이러한 분야들이 잘 도입이 되고 있는 것 같지는 않지만, 그래도 혹시나해서 기록을 일단 해둔다.
+
+Zhang, Ke, Jiangbo Lu, and Gauthier Lafruit. "Cross-based local stereo matching using orthogonal integral images." *IEEE transactions on circuits and systems for video technology* 19.7 (2009): 1073-1079.
+
+
+
  빠진 내용들이 좀 있을 수 있는데, 곧 Multiple View Geometry in Computer Vision이라는 책으로 뮌헨공대에서 강의를 해주신 Daniel Cremers 교수님의 강의자료를 공부한 내용을 포스팅하면서 짚고 넘어갈 예정이다.
 
  혹시나 참고할 사람을 위해 해당 수업의 첫번째 강의는 링크는 아래에 있다. 아래 자세히 보기에서(영상의 description) slidenote를 받아서 볼 수 있다. geometry에 관련한 내용들이 정말 잘 나와있어서, 3D에 관련해서 이론적인 내용을 공부하려면, 강의노트라도 한번은 보는 것이 필요하다.
@@ -101,3 +215,9 @@ Bundle Adjustment, 위키피디아, [https://en.wikipedia.org/wiki/Bundle_adjust
 Atlas, https://github.com/magicleap/Atlas
 
 Murez, Zak, et al. "Atlas: End-to-End 3D Scene Reconstruction from Posed Images." *arXiv preprint arXiv:2003.10432* (2020).
+
+Interpolation, 위키피디아, [https://en.wikipedia.org/wiki/Interpolation](https://en.wikipedia.org/wiki/Interpolation)
+
+SGM, 위키피디아, [https://en.wikipedia.org/wiki/Semi-global_matching](https://en.wikipedia.org/wiki/Semi-global_matching)
+
+PnP Algorithm, 위키피디아, [https://en.wikipedia.org/wiki/Perspective-n-Point](
