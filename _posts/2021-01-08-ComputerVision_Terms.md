@@ -134,6 +134,40 @@ Murez, Zak, et al. "Atlas: End-to-End 3D Scene Reconstruction from Posed Images.
 
 
 
+### Context-aware
+
+http://yhs968.blogspot.com/2019/01/context-aware-1.html
+
+
+
+### Uncertainty
+
+Aleatoric(Homoscedastic, Heteroscedastic), Epistemic
+
+CNN에 L2 norm penalty와 MC dropout을 적용하는 것이 Bayesian CNNs와 일치하는 것.
+
+ 이게 무슨 소릴까?
+
+ 일단 uncertainty라는 것은, 말 그대로 불확실성으로, machine learning에서는 확실하지 않은 것을 판단할 수 있는 것을 말한다.
+
+ 이 쪽이 연구가 된 이유로는, AI가 흑인 여성 둘을 고릴라로 판단하고, 자율주행차가 트레일러를 하늘로 착각하고 들이박은 사건 이후이다.
+
+ 간단하게만 짚고 넘어가면,
+
+ Aleatoric Uncertainty(Data Uncertainty)는 데이터에 내재되어 있는 에러에 대한 불확실성
+
+ Epistemic Uncertainty(Model Uncertainty)는 모델에 내재되어 있는 에러에 대한 불확실성.
+
+ 이 두 가지로 분류되는 uncertainty를 잘 설명하고, 잘 합쳐서 문제를 해결한 것은 아래 논문을 참조.
+
+한글로 리뷰가 많이 나와있기에 그것을 참고해도 좋을 것 같다.
+
+Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep learning for computer vision?." *Advances in neural information processing systems*. 2017.
+
+
+
+
+
 ### 이 외 참고하면 좋은 논문
 
 
@@ -221,3 +255,5 @@ Interpolation, 위키피디아, [https://en.wikipedia.org/wiki/Interpolation](ht
 SGM, 위키피디아, [https://en.wikipedia.org/wiki/Semi-global_matching](https://en.wikipedia.org/wiki/Semi-global_matching)
 
 PnP Algorithm, 위키피디아, [https://en.wikipedia.org/wiki/Perspective-n-Point](
+
+Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep learning for computer vision?." *Advances in neural information processing systems*. 2017.
