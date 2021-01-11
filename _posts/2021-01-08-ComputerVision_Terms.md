@@ -60,7 +60,7 @@ Arun, K. Somani, Thomas S. Huang, and Steven D. Blostein. "Least-squares fitting
 
 ### TSDF(Truncated Signed Distance Function)
 
- TSDF는 Surface 관련한 내용, 혹은 3D reconstruction(3D recon이라고도 한다.) ~~군대 용어인 리컨과 헷갈려서 나도 처음에 뭔지 몰랐다~~ 
+ TSDF는 Surface 관련한 내용, 혹은 3D reconstruction(3D recon이라고도 한다.) ~~군대 용어인 리컨과 헷갈려서 나도 처음에 뭔지 몰랐다~~  혹은 T를 빼고 SDF라고도 한다.(제한을 거는 경우 T를 붙여 TSDF로 표현하기도 함)
 
  어떤 공간이나 Image에서 depth data를 뽑는다고 가정할 때, 이 값들을 -1 ~ 1로 normalization하게 되면 0에 해당하는 곳은 같은 surface일 가능성이 높다는 것이다. (같은 surface라기보단, 서로 이어진 surface)
 
@@ -165,6 +165,16 @@ CNN에 L2 norm penalty와 MC dropout을 적용하는 것이 Bayesian CNNs와 일
 Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep learning for computer vision?." *Advances in neural information processing systems*. 2017.
 
 
+
+### ORB, BRIEF descriptor
+
+https://m.blog.naver.com/PostView.nhn?blogId=ghd3079&logNo=221496302601&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+
+
+### Beta distribution
+
+[https://en.wikipedia.org/wiki/Beta_distribution](https://en.wikipedia.org/wiki/Beta_distribution)
 
 
 
