@@ -178,6 +178,52 @@ https://m.blog.naver.com/PostView.nhn?blogId=ghd3079&logNo=221496302601&proxyRef
 
 
 
+### HDR Image
+
+ Dynamic Range란 어두운 영역과 밝은 영역 사이의 비를 의미하는데, 우리가 눈으로 보는 세상은 이 비가 상당히 높지만, 카메라로 찍은 사진이나 컴퓨터의 디스플레이가 제공해주는 것은 자연이 제공하는 dynamic range에 비해 그 크기가 상당히 작을 수 밖에 없다.
+
+ 이를 보완해주기 위해 새로 생긴 것이 바로 'HDR image(High Dynamic Range image)' 이다. 각 pixel이 0~255의 8bit 이 아닌 32bit 의 floating point number로 나타내기 때문에, 16bit나 8bit로 불러내는 이미지 형식으로 HDR을 불러내게 되면 검정에서 흰색 사이에서만 표현을 하기 때문에 gray scale로 불러내게 된다.
+
+ 그럼 이런 image는 어떤 확장자로 주로 저장이 되는가?
+
+ 여기서 __.pfm file__ 이 등장한다.
+
+
+
+### PFM(Portable Float Map) Format
+
+.pfm 확장자라는 것이 있다. 윈도우에서 font로 사용하는 PFM(Printer Font Metrics)와는 다른 file 형식이다.(사실 꼴은 같으나, 같은 형태로 font로 불러내면 meta data같은 것들이 맞지 않아서 안 불러와진다.)
+
+ 이러한 확장자를 사용하는 이유는, 위에서 소개한 __HDR Image__ 에도 사용이 되지만, image의 depth를 나타내어주는 것에도 도움이 된다. 32bit floating point number이기에 depth를 결정하기에도 좋은 결과를 나타내어 준다.(보통 전용 뷰어로 따로 봐야 보인다.)
+
+ 이게 대충 감이 안 잡힌다면, 대충 아래와 같다.
+
+![img1](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210112-1.PNG)
+
+ 좌측은 depth map이고 우측이 reference image인데, depth map의 확장자가 .png(png 확장자는 한 pixel이 8bit로 구성되어있다.)이기에, visible하게 보여준다곤 했지만 relative한 형태를 보여줄 수 없어 위와 같이 보이게 된다.(pfm의 경우 32bit로 구성)
+
+
+
+### ML에서 multi-GPU가 hardware level에서 동작하는 방법
+
+pytorch에서 multi-GPU 작동 방식: [https://www.telesens.co/2019/04/04/distributed-data-parallel-training-using-pytorch-on-aws/](https://www.telesens.co/2019/04/04/distributed-data-parallel-training-using-pytorch-on-aws/)
+
+tensorflow에서 multi-GPU 작동 방식: [https://www.quora.com/Can-I-train-deep-learning-models-using-two-different-GPUs-in-one-build](https://www.quora.com/Can-I-train-deep-learning-models-using-two-different-GPUs-in-one-build)
+
+전반적으로 distributed multi-GPU를 검색하면 각 framework마다 GPU를 쓰는 방법이 나오는 것 같다. pytorch의 경우는 distributedDataParallel을 쓰는 경우와 아닌 경우가 있는 것 같음. 해당 내용을 읽으면 될 듯 하다.
+
+
+
+### LSTM과 GRU
+
+ LSTM은 Forget Gate와 Input Gate로, GRU는 Reset Gate, Update Gate라는 서로 비슷해보이는 성분으로 구성되어 있다. 정말 간단히 소개하면, GRU가 더 가볍게 만들어졌으면서도 LSTM과의 성능에선 큰 차이를 보이지않는 모델이다. (R-MVSNet에서 사용이 되었다.)
+
+Yjjo님의 LSTM 포스팅, https://yjjo.tistory.com/17
+
+Yjjo님의 GRU 포스팅, [https://yjjo.tistory.com/18](https://yjjo.tistory.com/18)
+
+
+
 ### 이 외 참고하면 좋은 논문
 
 
@@ -222,7 +268,7 @@ Shavit, Yoli, and Ron Ferens. "Introduction to camera pose estimation with deep 
 
 __Computing the stereo matching cost with a convolutional neural network__
 
-Stereo image에서 어떻게 cost를 계산하는지에 대한 내용이 실려져있음. cost에 대한 개념을 잡으려면 해당 논문을 읽어보는 것도 좋음. CBCA가 여기에서 소개되기도 함.
+Stereo image에서 어떻게 cost를 계산하는지에 대한 내용이 실려져있음. cost에 대한 개념을 잡으려면 해당 논문을 읽어보는 것도 좋음. CBCA가 여기에서 소개되기도 함. (근데 3d cost volume에 대한 이해를 하려면 코드를 돌려보는 것이 좋다. frustum에서 disparity에 대한 cost가 어떻게 잡히는지는 해당 논문을 봐도 알기 힘들다)
 
 Zbontar, Jure, and Yann LeCun. "Computing the stereo matching cost with a convolutional neural network." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2015.
 
@@ -267,3 +313,7 @@ SGM, 위키피디아, [https://en.wikipedia.org/wiki/Semi-global_matching](https
 PnP Algorithm, 위키피디아, [https://en.wikipedia.org/wiki/Perspective-n-Point](
 
 Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep learning for computer vision?." *Advances in neural information processing systems*. 2017.
+
+Yjjo님의 LSTM 포스팅, https://yjjo.tistory.com/17
+
+Yjjo님의 GRU 포스팅, [https://yjjo.tistory.com/18](https://yjjo.tistory.com/18)
