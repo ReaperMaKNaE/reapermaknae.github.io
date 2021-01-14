@@ -10,6 +10,10 @@ tag : [PaperReview]
 
 
 
+ 요약하면, 기존에 사용하던 방식은 3D Cost volume 방식의 network에서 벗어나 Point Cloud 형태를 바로 학습시키는 방법. 이런 형태의 network를 만들기 위해 Point Flow라는 새로운 것을 도입했음. 덕분에 네트워크가 많이 가벼워졌다고 함. 
+
+
+
 ### Abstract
 
  우리가 소개할 network는 point-based deep framework인 Point-MVSNet이다. 다른 network과는 달리, 우리 network은 target scene을 바로 point cloud로 잡는다. 조금 더 구체적으로는, coarse-to-fine 방법으로 depth를 예측한다. 일단 먼저 coarse depth map을 만든 후, 이를 point cloud로 만들고 GT와 depth를 iteration 돌려서 refine한다. 우리가 만든 network는 3D geometry와 2D texture information를 feature-augmented point cloud로 합쳐 이 둘을 같이, 효과적으로 저울질 할 수 있다. 그리고 각 point마다 3D flow를 estimate한다. 이러한 point-based architecture는 높은 정확도를 가지고 있고, 연산에 있어서 효율적이며, cost volume base로 이루어진 구조들보다 유연하다. 데이터셋은 DTU과 Tanks and Temples dataset을 사용했다.
@@ -55,6 +59,8 @@ __Point-based 3D Learning__
 
 ### Method
 
+![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210113-18.PNG)
+
  여기에선 우린 architecture를 소개할 것이다. 우리가 소개할 architecture는 2 step으로 이루어져있다. __coarse depth prediction__ , __iterative depth refinement__ 이다. I_0를 reference image로 하고, I_i(i=1:N)은 neighbouring source image라 하자. 우린 처음 I_o에 대한 coarse depth map을 만든다. 이 때 만들어진 resolution은 매우 low하기 때문에, volumetric MVS method는 충분히 효과적이다. 두번째로 우리가 소개할 2D-3D feature lifting(section 3.2에서 소개 예정)는 3D geometry와 2D image 정보를 연관하는 것들을 소개한다. 이후 우리는 input depth map을 higher resolution depth map으로 iterative하게 refine하는 PointFlow를 소개한다.
 
 __3.1 Coarse depth prediction__
@@ -91,13 +97,95 @@ section 3.1에서 생성된 depth map은 low resolution때문에 accuracy가 상
 
 __Point Hypotheses Generation__
 
-(작성중)
+ image feature map에서 각 point의 depth 차이를 regress하는 것은 결코 쉽지 않다. perspective transformation(아마 2D에서 3D로 바꾸는 camera geometry의 변경을 의미하는 듯하다) 때문에, 2D에서의 공간적인 맥락이 3D Euclidean space에 가깝게 반영될 수는 없다.(??)
+
+ network의 modeling을 하기 위해, Figure 3에 나온 것과 같이 reference camera direction에서 얼마나 벗어나있는지를 나타내는 일련의 point hypothese를 만들어내는 것을 제안한다.
+
+ t가 normalized reference camera direction이, s가 displacement step size, unproject point가 p라고 한다면, hypothesized point p의 집합은 아래와 같다.
+
+![img4](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-1.PNG)
+
+ 이 point hypotheses는 image 주변의 필요한, 서로 다른 depth에서 image feature information을 위해, geometry relationship을 모으는 network에서 중요한 역할을 한다.(해석이 아주 이상하게 되어 있지만 대충 맥락은 비슷한 것 같다. m의 경우는 아래 Edge convolution에서 다룰 예정.)
+
+ __Edge Convolution__
+
+ 전통적인 MVS 방법에 따르면 local neighborhood는 depth prediction을 robust하게 만들어주는 것에 좋은 역할을 했다. 유사하게, 우리는 이러한 이웃하는 점 간의 feature aggregation을 강화하기 위해 DGCNN의 전략을 취했다. 
+
+![img5](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-2.PNG)
+
+ 위 그림과 같이, directed graph는 point의 feature propagation에 도움이 되는 local geometric structure information을 할 수 있도록 kNN을 이용해서 point set을 만든다.
+
+ (여기서 m에 대해서 잠깐 살펴보면, unprojected point p 에 대해서, 각 방향(좌우, 혹은 상하)로 임의의 point를 만들어내는 데, 이 point를 각 방향으로 얼마나 만들지를 m으로 설정하는 듯 하다. 아마도 m이 커지면 연산량이 많아질거고, 적어지면 그만큼 spatial feature information을 얻어내기 힘들기에 마찬가지로 적절한 수를 찾는 leveraging이 필요할 것이라고 본다.)
+
+![img6](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-3.PNG)
+
+ 위에서 C_p는 feature augmented point cloud를 의미한다. 그렇다면, edge convolution은 위 식과 같아진다. 위에서 h_\theta는 \theta로 parameter화 된 learnable non-linear function이고, 사각형은 channel-wise symmetric aggregation operation이다. symmetric operation을 위한 multiple option들이 있다.(max pooling, average pooling, weighted sum 등등) 우린 나중에 이러한 방법들을 비교할 것이다.
+
+__Flow Prediction__
+
+![img7](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-4.PNG)
+
+ 우리가 설계한 flow prediction의 network는 위와 같다. input은 feature augmented point cloud(위에서 계산한 C_p)이고, output은 depth residual map이다. 우린 서로 다른 scale의 point feature들을 aggregate하기 위해 3개의 EdgeConv layer를 썼다. shortcut connection 역시 사용되었다. 마지막으로, 각 unproject point의 hypothesized points를 softmax한 probability scalar를 output으로 내는 pointwise feature로 변형하는 것엔 MLP가 사용이 되었다. 
+
+![img8](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-5.PNG)
+
+ unprojected point의 displacement에 대한 값은 위와 같이 계산이 된다. 이러한 방식은 differentiable하여 back projection이 가능하다.
+
+__Iterative Refinement with Upsampling__
+
+우리의 point based network architecture의 유연성 때문에, flow prediction은 3D cost volume base network에서는 하기 힘든, iterative한 동작을 할 수 있다. (space partitioning이 고정되어 있기 때문에) coarse prediction이나 former residual prediction에서 온 depth map D^(i)에서 D^(i+1)을 얻기 위해 upsmaple, kNN등을 쓰고 flow prediction을 할 수 있다. 더욱이, 우리는 unprojected point와 hypothesized point 사이의 depth interval을 줄여서 조금 더 detail feature를 예측할 수 있다.(iteration이 coarse-to-fine 작업이라 점점 high resolution으로 변경되는데, 이 때 어떤 방법을 적용해서 이걸 가능하게 했는지에 대한 내용)
+
+__3.4 Training loss__
+
+![img9](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-6.PNG)
+
+ 대부분의 deep MVS network와 유사하게, 우리는 이러한 문제를 L1 loss로 다루었다. predicted depth와 GT의 차이를 더하고, 이를 iteration마다 누적시켰다. \lambda는 weight로 1로 뒀는데, s는 뭔지 안나와있다.
 
 
 
+### Experiments
+
+__4.1 DTU dataset__
+
+![img10](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-7.PNG)
+
+__4.2 Implementation details__
+
+__Training__
+
+__Evaluation__
+
+ depth는 96, l은 3, N(view set)은 5를 썼음.
+
+![img11](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-8.PNG)
+
+__4.3 Benchmarking on DTU dataset__
+
+__4.4 PointFlow iteration__
+
+![img12](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-9.PNG)
+
+__4.5 Ablation study__
+
+![img13](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-10.PNG)
+
+__Edge Convolution__
+
+__Feature Pyramid__
+
+__4.6 Reliance on initial depth maps__
+
+__4.7 Comparison to point cloud upsampling__
+
+![img14](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210114-11.PNG)
+
+__4.8 Foveated detph inference__
+
+__4.9 Generalizability of the PointFlow Module__
 
 
-### Conclusions
+
+### Conclusion
 
 
 
