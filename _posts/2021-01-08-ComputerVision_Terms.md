@@ -178,6 +178,12 @@ https://m.blog.naver.com/PostView.nhn?blogId=ghd3079&logNo=221496302601&proxyRef
 
 
 
+### ROC Curve, AUC
+
+https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=ko
+
+
+
 ### HDR Image
 
  Dynamic Range란 어두운 영역과 밝은 영역 사이의 비를 의미하는데, 우리가 눈으로 보는 세상은 이 비가 상당히 높지만, 카메라로 찍은 사진이나 컴퓨터의 디스플레이가 제공해주는 것은 자연이 제공하는 dynamic range에 비해 그 크기가 상당히 작을 수 밖에 없다.
