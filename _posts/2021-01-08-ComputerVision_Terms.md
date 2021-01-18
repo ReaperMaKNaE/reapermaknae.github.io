@@ -230,6 +230,22 @@ Yjjo님의 GRU 포스팅, [https://yjjo.tistory.com/18](https://yjjo.tistory.com
 
 
 
+### Attention, Transformer
+
+Attention: [https://nlpinkorean.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://nlpinkorean.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
+
+Transformer: [https://nlpinkorean.github.io/illustrated-transformer/](https://nlpinkorean.github.io/illustrated-transformer/)
+
+
+
+### Keypoint, Descriptor
+
+[https://darkpgmr.tistory.com/131](https://darkpgmr.tistory.com/131)
+
+
+
+
+
 ### 이 외 참고하면 좋은 논문
 
 
@@ -323,3 +339,9 @@ Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep le
 Yjjo님의 LSTM 포스팅, https://yjjo.tistory.com/17
 
 Yjjo님의 GRU 포스팅, [https://yjjo.tistory.com/18](https://yjjo.tistory.com/18)
+
+Attention, [https://nlpinkorean.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://nlpinkorean.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
+
+Transformer, [https://nlpinkorean.github.io/illustrated-transformer/](https://nlpinkorean.github.io/illustrated-transformer/)
+
+keypoint, descriptor, 다크프로그래머, "영상 특이점(keypoint) 추출방법", [https://darkpgmr.tistory.com/131](https://darkpgmr.tistory.com/131)
