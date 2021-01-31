@@ -32,18 +32,18 @@ $$
 
  R과 t를 각각 Rotation, translation으로 한다고 하고, A는 camera parameter matrix를 의미하며, 그 의미는 아래와 같다.
 $$
-A = \begin{bmatrix}
+{A = \begin{bmatrix}
 \alpha_u & -\alpha_u cot \theta & u_0\\ 
 0 & \alpha_v/sin\theta & v_0\\ 
 0 & 0 & 1
-\end{bmatrix} \quad where \quad \alpha_u, \alpha_v = focal\; distance
+\end{bmatrix} \quad where \quad \alpha_u, \alpha_v = focal\; distance}
 $$
 $$
-A' = \begin{bmatrix}
+{A' = \begin{bmatrix}
 \alpha'_u & -\alpha'_u cot \theta' & u'_0\\ 
 0 & \alpha'_v/sin\theta' & v'_0\\ 
 0 & 0 & 1
-\end{bmatrix}\quad where \quad \theta = angle\; between\; the\;two\;images
+\end{bmatrix}\quad where \quad \theta = angle\; between\; the\;two\;images}
 $$
 
 그리고, aspect ratio라고 알려진 값은 아래와 같다.
