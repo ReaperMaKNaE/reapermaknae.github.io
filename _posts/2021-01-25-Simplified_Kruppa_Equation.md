@@ -24,22 +24,29 @@ $$
 $$
  이 되고, 여기서 s는 nonzero scalar factor, P는 3x4 projection matrix이다. 만약 homography의 이미지 2장을 상상해보면, 아래와 같이 정리할 수 있다.
 $$
-{s_1 \widehat{m_1} = P_1 \widehat{M} \quad where \quad P_1 = [A|0] \\s_2 \widehat{m_2} = P_2 \widehat{M} \quad where \quad P_2 = [A'R|A't]}
+s_1 \widehat{m_1} = P_1 \widehat{M} \quad where \quad P_1 = [A|0]
 $$
+$$
+s_2 \widehat{m_2} = P_2 \widehat{M} \quad where \quad P_2 = [A'R|A't]
+$$
+
  R과 t를 각각 Rotation, translation으로 한다고 하고, A는 camera parameter matrix를 의미하며, 그 의미는 아래와 같다.
 $$
-{A = \begin{bmatrix}
+A = \begin{bmatrix}
 \alpha_u & -\alpha_u cot \theta & u_0\\ 
 0 & \alpha_v/sin\theta & v_0\\ 
 0 & 0 & 1
-\end{bmatrix} \quad where \quad \alpha_u, \alpha_v = focal\; distance\\ 
+\end{bmatrix} \quad where \quad \alpha_u, \alpha_v = focal\; distance
+$$
+$$
 A' = \begin{bmatrix}
 \alpha'_u & -\alpha'_u cot \theta' & u'_0\\ 
 0 & \alpha'_v/sin\theta' & v'_0\\ 
 0 & 0 & 1
-\end{bmatrix}\quad where \quad \theta = angle\; between\; the\;two\;images}
+\end{bmatrix}\quad where \quad \theta = angle\; between\; the\;two\;images
 $$
- 그리고, aspect ratio라고 알려진 값은 아래와 같다.
+
+그리고, aspect ratio라고 알려진 값은 아래와 같다.
 $$
 {\frac{\alpha_v}{\alpha_u}=aspect\;ratio}
 $$
@@ -78,7 +85,7 @@ $$
 $$
 {\frac{r^2 v_1^TKv_1 }{u_2^TK'u_2}=-\frac{rsv_1^TKv_2}{u_2^TK'u_1}=\frac{s^2 v_2^T K v_2}{u_1^T K' u_1}}
 $$
- K 와 K'은 한 쌍의 image를 촬영한 camera가 서로 다르다고 가정했을 경우, 각 camera에 해당하는 kruppa matrix이다. 그런데 위 식을 풀려면, 무언가 아다리가 안맞다. 미지수는 5개이고 식은 3개인데, unique solution을 어떻게 찾을 수 있는가?
+ K 와 $K'$은 한 쌍의 image를 촬영한 camera가 서로 다르다고 가정했을 경우, 각 camera에 해당하는 kruppa matrix이다. 그런데 위 식을 풀려면, 무언가 아다리가 안맞다. 미지수는 5개이고 식은 3개인데, unique solution을 어떻게 찾을 수 있는가?
 
  일단 constraint를 걸게 된다. 두 이미지를 촬영한 카메라는 같다고 가정하고, 그 카메라의 kruppa matrix를 K로 통일한 후, aspect ratio를 1이라고 가정하며, focal length의 x, y가 같고 skew part(K2)가 0이라고 한다면, kruppa matrix는 단 2개의 미지수만 남게 된다.
 $$
