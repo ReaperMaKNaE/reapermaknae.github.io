@@ -49,6 +49,10 @@ permalink: /:year/:month/:title/
 #highlighter: rouge
 
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: true
