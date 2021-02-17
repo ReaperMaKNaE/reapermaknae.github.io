@@ -109,7 +109,7 @@ __3.3 Joint Learning for Total 3D Understanding__
 
 __Individual losses.__
 
- ODN은 3D object box를 recover하기 위해 $(\delta, d, s ,\theta)$를 예측하고, LEN은 camera pose에 따른 world system의 3D object를 변형하기 위한 layout box인 $(\beta, \gamma, C, s^l, \theta^l)$을 만든다. angle과 length는 L2 loss로 regress된다. 우리는 classification과 regression loss를 사용해서 그들을 inline으로 유지할 수 있도록 한다.( $(\theta, \theta^l, \beta, \gamma, d, s, s^l)$을 최적화시키기 위한 loss: $\mathcal{L}^{cls,reg} = \mathcal{L}^{cls} + \lambda_r \mathcal{L}^{reg}$) 여기서 $C$와 $\delta$를 미리 계산된 center와의 offset으로 계산하기 위해, 우리는 그들을 L2 loss로 예측한다. MGN에서 우리는 Chamfer loss $\mathcal{L}_c$와 edge loss$\mathcal{L}_e$, boundary loss $\mathcal{L}_b$를 각각 10, 50, 30 으로 적용했다.(mesh modification에서 edge를 분류하기 위한 cross entropy loss $\mathcal{L}_{ce}$와 함께)
+ ODN은 3D object box를 recover하기 위해 $(\delta, d, s ,\theta)$를 예측하고, LEN은 camera pose에 따른 world system의 3D object를 변형하기 위한 layout box인 $(\beta, \gamma, C, s^l, \theta^l)$을 만든다. angle과 length는 L2 loss로 regress된다. 우리는 classification과 regression loss를 사용해서 그들을 inline으로 유지할 수 있도록 한다.( $(\theta, \theta^l, \beta, \gamma, d, s, s^l)$을 최적화시키기 위한 loss: $\mathcal{L}^{cls,reg} = \mathcal{L}^{cls} + \lambda_r \mathcal{L}^{reg}$) 여기서 $C$와 $\delta$를 미리 계산된 center와의 offset으로 계산하기 위해, 우리는 그들을 L2 loss로 예측한다. MGN에서 우리는 Chamfer loss $\mathcal{L}_c$와 edge loss $\mathcal{L}_e$, boundary loss $\mathcal{L}_b$ 를 각각 10, 50, 30 으로 적용했다.(mesh modification에서 edge를 분류하기 위한 cross entropy loss $\mathcal{L}_{ce}$ 와 함께)
 
 __Joint losses.__
 

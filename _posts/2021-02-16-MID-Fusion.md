@@ -65,17 +65,17 @@ __SUMMARY__
 
 $\underset{\rightarrow}{\mathcal{F}}_A$: reference coordinate frame
 
-$\underset{\rightarrow}{\mathcal{F}}_B$ to $\underset{\rightarrow}{\mathcal{F}}_A$ $ := T_{AB}$  with rotation matrix $C_{AB}$ and translation vector $_{A}\mathbb{r}_{AB}$
+$\underset{\rightarrow}{\mathcal{F}}_B$ to $\underset{\rightarrow}{\mathcal{F}}_A$ $:=T_{AB}$  with rotation matrix $C_{AB}$ and translation vector $_{A}\mathbb{r}_{AB}$
 
  각 image pair를 구분할 때에 live(L)과 reference (R) image로 구분
 
- 예를 들면, live RGB-D image는 intensity image $I_L$과 depth image $D_L$ 을 가짐.(여기서 2D pixel position은 $u_L$로 선언되고 pixel lookup(bilinear interpolation을 포함해서)은 $[ \cdot]$으로 표현)
+ 예를 들면, live RGB-D image는 intensity image $I_L$ 과 depth image $D_L$ 을 가짐.(여기서 2D pixel position은 $u_L$ 로 선언되고 pixel lookup(bilinear interpolation을 포함해서)은 $[\cdot]$ 으로 표현)
 
  perspective projection: $\pi$
 
  perspective back-projection: $\pi^{-1}$
 
- 우리 system에서, 우리는 detect된 모든 object를 각각의 object coordinate frame인 $\underset{\rightarrow}{\mathcal{F}}_{O_n}$, $(n \in \{ 0,...,N \})$ 이고, 여기서 $N$은 total number of objects를 말하며, 0은 background를 의미한다. 우리는 canonical static volumetric model이 각 object coordinate frame에 저장이 되고, 이는 multi-instance SLAM system의 기본이 된다. 우리는 COCO dataset과 관련된 각 object를 사용했고, world coordinate $T_{WO_n}$ 에 대해 현재의 pose 확률을 계산한다. 각 object는 서로 분리된 octree structure로 표시되고, 모든 voxel은 SDF value, intensity, foreground probability와 이와 연관된 weight로 저장이된다.
+ 우리 system에서, 우리는 detect된 모든 object를 각각의 object coordinate frame인 $\underset{\rightarrow}{\mathcal{F}}_{O_n}$ , $(n \in \{ 0,...,N \})$ 이고, 여기서 $N$은 total number of objects를 말하며, 0은 background를 의미한다. 우리는 canonical static volumetric model이 각 object coordinate frame에 저장이 되고, 이는 multi-instance SLAM system의 기본이 된다. 우리는 COCO dataset과 관련된 각 object를 사용했고, world coordinate $T_{WO_n}$ 에 대해 현재의 pose 확률을 계산한다. 각 object는 서로 분리된 octree structure로 표시되고, 모든 voxel은 SDF value, intensity, foreground probability와 이와 연관된 weight로 저장이된다.
 
 
 
@@ -91,12 +91,12 @@ __A. System overview__
 
 __RGB-D Camera tracking__
 
- 이번 part에서는 live camera pose $T_{WC_L}$을 estimate한다. 이는 2단계로 구성이 되어 있다.
+ 이번 part에서는 live camera pose $T_{WC_L}$ 을 estimate한다. 이는 2단계로 구성이 되어 있다.
 
 - 사람을 제외한 모든 model vertices를 detect한다.
 - 모든 static scene part를 detect한다.
 
- 두 step은 모두 dense point-to-plane ICP residual $e_g$와 photometric (RGB) residual $e_p$ 를 최소화하는 역할을 수행한다.(각각은 $w_g, w_p$로 weight되어 있다.)
+ 두 step은 모두 dense point-to-plane ICP residual $e_g$ 와 photometric (RGB) residual $e_p$ 를 최소화하는 역할을 수행한다.(각각은 $w_g, w_p$로 weight되어 있다.)
 $$
 E_{track}(T_{WC_L}) = \frac{1}{2} \begin{pmatrix} \underset{u_L \in M_L}{\sum} w_g \rho (e_g) + \underset{u_R \in M_R}{\sum}w_p \rho(e_p) \end{pmatrix}, \qquad (1)
 $$
@@ -106,7 +106,7 @@ $$
 $$
 e_g(T_{WC_L})=_Wn^r[u_r]\cdot (T_{WC_LC_L}v[u_L]-_Wv^r[u_r]), \qquad (2)
 $$
- 위 식에서 $_{C_L}v$는 back projection으로 된 camera coordinate의 live vertex map을 말하고,  $_Wv^r, _Wn^r$은 world coordinate에서 rendered vertex map과 normal map을 말한다. live depth map에서 각각의 pixel $u_L$에 대해, 그들의 rendered depth map에서의 연관성 $u_r$은 projective data association에서 찾을 수 있다.
+ 위 식에서 $_{C_L}v$는 back projection으로 된 camera coordinate의 live vertex map을 말하고,  $_Wv^r, _Wn^r$ 은 world coordinate에서 rendered vertex map과 normal map을 말한다. live depth map에서 각각의 pixel $u_L$ 에 대해, 그들의 rendered depth map에서의 연관성 $u_r$은 projective data association에서 찾을 수 있다.
 $$
 u_r = \pi (T_{WC_R}^{-1} T_{WC_L}(\pi^{-1}(u_L,D_L[u_L]))), \qquad (3)
 $$
@@ -118,7 +118,7 @@ e_p(T_{WC_L}) = I_R[u_R]-I_L[\pi (T_{WC_L}^{-1}(T_{WC_R}\pi^{-1}(u_R,D_R^r[u_R])
 $$
  Co-fusion과는 달리, 우리는 model에서 depth map의 quality에 noise를 덜하게 하기 위해 live frame이나 reference frame의 raw depth map 대신 rendered reference depth map을 이용해서 photometric residual을 평가한다. 이러한 방법은 camera가 surface에 가까울 때 조금 더 개선이 된다.
 
- 우리는 ICP와 RGB residual을 합치기 위해서 measurement uncertainty weight를 소개한다. RGB residual에서 measure uncertainty는 모든 pixel에서 상수로 가정한다. ICP residual에서는 input depth map의 quality가 depth sensor와 depth range의 구조에 연관이 되어있다. 우리는 inverse covariance definition을 depth measurement uncertainty에 적용했다.(다른 Dense RGB-D SLAM에서 이걸 사용해서 따라한듯) sensor parameter인 baseline b, disparity d, focal length f, x-y plane 사이의 uncertainty $\sigma_{xy}$, disparity direction $\sigma_z$, standard deviation $\sigma_D$ 라하면,
+ 우리는 ICP와 RGB residual을 합치기 위해서 measurement uncertainty weight를 소개한다. RGB residual에서 measure uncertainty는 모든 pixel에서 상수로 가정한다. ICP residual에서는 input depth map의 quality가 depth sensor와 depth range의 구조에 연관이 되어있다. 우리는 inverse covariance definition을 depth measurement uncertainty에 적용했다.(다른 Dense RGB-D SLAM에서 이걸 사용해서 따라한듯) sensor parameter인 baseline b, disparity d, focal length f, x-y plane 사이의 uncertainty $\sigma_{xy}$ , disparity direction $\sigma_z$ , standard deviation $\sigma_D$ 라하면,
 $$
 \sigma_D = (\frac{D_L[u_L]}{f}\sigma_{xy}, \frac{D_L[u_L]}{f}\sigma_{xy}, \frac{D_L^2[u_L]}{fb}\sigma_z) \qquad (5)
 $$
@@ -136,7 +136,7 @@ $$
 
 __C. Object pose estimation__
 
- 이번 part에서 우리는 moving object의 pose를 어떻게 계산하는지 설명한다. virtual camera를 base로한 tracking에 반해, 우리는 새로운 object-centric 접근 방법을 통한 방법을 제안한다. 이러한 방법은 초기 pose 추정에서 더 좋은 성능을 낸다. 우리는 여전히 dense ICP와 RGB tracking, weight를 섞어서 사용한다. 식 (1)과 같지만, ICP와 RGB residual의 정의만 조금 달라진다.  reference object frame에 있는 vertex map과 live object frame에 있는 vertex map을 align시킴으로써 object와 camera의 relative pose인 $T_{C_LO_L}$을 구할 수 있다.
+ 이번 part에서 우리는 moving object의 pose를 어떻게 계산하는지 설명한다. virtual camera를 base로한 tracking에 반해, 우리는 새로운 object-centric 접근 방법을 통한 방법을 제안한다. 이러한 방법은 초기 pose 추정에서 더 좋은 성능을 낸다. 우리는 여전히 dense ICP와 RGB tracking, weight를 섞어서 사용한다. 식 (1)과 같지만, ICP와 RGB residual의 정의만 조금 달라진다.  reference object frame에 있는 vertex map과 live object frame에 있는 vertex map을 align시킴으로써 object와 camera의 relative pose인 $T_{C_LO_L}$ 을 구할 수 있다.
 $$
 e_g(T_{C_LO_L}) = C_{WO_R}^{-1}\;_Wn^r[u_r] \cdot ( T_{C_LO_L}^{-1}v[u_L] - T_{WO_R}^{-1} \; _W v^r[u_r]) \qquad (8)
 $$
@@ -144,7 +144,7 @@ $$
 $$
 e_p(T_{C_LO_L}) = I_R[u_R]-I_L[\pi T_{C_LO_L}T_{C_LO_L}^{-1}(\pi^{-1}(u_R,D_R^r[u_R])))], \qquad (9)
 $$
- 위와 같은 cost function은 Gauss-Newton을 이용해서 optimize된다.($T_{C_LO_L}$은 $T_{C_LO_R}$로 초기화 되어 있음)
+ 위와 같은 cost function은 Gauss-Newton을 이용해서 optimize된다.($T_{C_LO_L}$ 은 $T_{C_LO_R}$ 로 초기화 되어 있음)
 
 __D. Combined semantic-geometric-motion segmentation__
 
