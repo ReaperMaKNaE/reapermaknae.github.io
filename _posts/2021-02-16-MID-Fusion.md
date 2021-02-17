@@ -75,7 +75,7 @@ $\underset{\rightarrow}{\mathcal{F}}_B$ to $\underset{\rightarrow}{\mathcal{F}}_
 
  perspective back-projection: $\pi^{-1}$
 
- 우리 system에서, 우리는 detect된 모든 object를 각각의 object coordinate frame인 $\underset{\rightarrow}{\mathcal{F}}_{O_n}, (n \in \{ 0,...,N \})$ 이고, 여기서 $N$은 total number of objects를 말하며, 0은 background를 의미한다. 우리는 canonical static volumetric model이 각 object coordinate frame에 저장이 되고, 이는 multi-instance SLAM system의 기본이 된다. 우리는 COCO dataset과 관련된 각 object를 사용했고, world coordinate $T_{WO_n}$ 에 대해 현재의 pose 확률을 계산한다. 각 object는 서로 분리된 octree structure로 표시되고, 모든 voxel은 SDF value, intensity, foreground probability와 이와 연관된 weight로 저장이된다.
+ 우리 system에서, 우리는 detect된 모든 object를 각각의 object coordinate frame인 $\underset{\rightarrow}{\mathcal{F}}_{O_n}$, $(n \in \{ 0,...,N \})$ 이고, 여기서 $N$은 total number of objects를 말하며, 0은 background를 의미한다. 우리는 canonical static volumetric model이 각 object coordinate frame에 저장이 되고, 이는 multi-instance SLAM system의 기본이 된다. 우리는 COCO dataset과 관련된 각 object를 사용했고, world coordinate $T_{WO_n}$ 에 대해 현재의 pose 확률을 계산한다. 각 object는 서로 분리된 octree structure로 표시되고, 모든 voxel은 SDF value, intensity, foreground probability와 이와 연관된 weight로 저장이된다.
 
 
 
