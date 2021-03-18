@@ -244,6 +244,14 @@ Transformer: [https://nlpinkorean.github.io/illustrated-transformer/](https://nl
 
 
 
+### mCE, mFR, NMS
+
+ mCE(mean Corruption Error): 서로 다른 corruption에 대한 error rate의 weighted average. 똑같은 image A에 눈이 오는(snow)랑 블러(blur)가 있는 변환된 이미지가 있다고 하면, snow와 blur등 서로 다른 corruption이 주어졌을 때 error가 얼마가 나오는지에 대한 평균을 의미.(snow <-> blur 로 하면 29%, snow <-> rainy 로 하면 25% .... 를 다 평균해서 구하면 mCE)
+
+mFR(mean Flip Rate): ImageNet-P의 경우 dataflip 등의 상태에서도 얼마나 robust한지 확인하는 척도. mCE와 마찬가지로 서로 다른 flip/perturbations에서 얼마나 robust한지를 의미함.(Error rate와 비슷함)
+
+NMS(Non-maximum supression): 최대값 제외하고 나머지 다 쳐냄.
+
 
 
 ### 이 외 참고하면 좋은 논문
