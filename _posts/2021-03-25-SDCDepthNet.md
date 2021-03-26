@@ -52,9 +52,79 @@ category wise depth estimation에서는 canonical space(하늘이나 땅 같은 
 
 __Instance-wise Depth Estimation__
 
- object class를 얻기 위해서, ROIAlign technique를 Mask R-CNN에서 들고 왔다. 하지만 거기서 사용하는 것은 굉장히 작은 수준이기 때문에, (내일 추가 작성 계획)
+ object class를 얻기 위해서, ROIAlign technique를 Mask R-CNN에서 들고 왔다. 하지만 거기서 사용하는 것은 굉장히 작은 수준이기 때문에, 개념만 따오고 아래와 같은 새로운 network을 만들었다.
+
+![img3](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-28.PNG)
+
+ 위 entwork에서 위쪽은 category를, 아래쪽은 instance를 담당하게 된다. 
+
+__3.2 Segmentation Guided Depth Aggregation__
+
+ final depth prediction을 위해, 우리는 semantic segmentation과 instance segmentation 결과를 바탕으로 per-segment depth map regression을 실행한다. 해당 알고리즘은 아래와 같다.
+
+![img4](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-29.PNG)
+
+ 위 알고리즘에서 p는 probability, S는 segmentation mask, F는 Instance depth map을 의미한다.
+
+__3.3 Network Training__
+
+![img5](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-30.PNG)
+
+ 위 식과 같은 Loss를 바탕으로 network를 훈련한다. 우측 아래 notation에서 I는 instance를, S는 segmentation을, d는 depth prediction을 의미한다.
 
 
+
+### Experiments
+
+__4.1 Implementation__
+
+몇몇 기법들이 사용되었는데, Error metric에서는 RMSE와 WHDR(Weighted human disagreement rate)가 추가되었다.
+
+__4.2 Cityscapes Results__
+
+![img6](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-31.PNG)
+
+![img7](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-32.PNG)
+
+__4.3 DIW Results__
+
+![img8](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-33.PNG)
+
+![img9](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-34.PNG)
+
+__4.4 NYU-Depth V2 Results__
+
+![img10](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-35.PNG)
+
+__4.5 Ablation study__
+
+__Effects of semantic divide-and-conquer__
+
+![img11](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-36.PNG)
+
+ model의 variant는 Category, Instance, depth estimation을 선택했느냐 안했느냐로 결정하게 된다. 해당 표를 plot하면 아래와 같다.
+
+![img12](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-37.PNG)
+
+ 그리고 추가적으로, averaged depth map과 random instance depth map을 뽑아봤는데, 그 결관느 아래와 같다.
+
+![img13](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-38.PNG)
+
+ 위 그림에서 붉은색 테두리는 averaged depth map을 말하고, 파란색은 random instance depth map을 의미한다.
+
+__Benefits of segmentation annotation.__
+
+![img14](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210325-39.PNG)
+
+ 학습을 시키면 시킬수록 WHDR이 줄어드는 것을 확인할 수 있어, model이 점점 segmentation annotation label에 접근할 수 있다는 사실을 확인할 수 있다.
+
+
+
+### Conclusion
+
+
+
+### Acknowledgement
 
 
 
