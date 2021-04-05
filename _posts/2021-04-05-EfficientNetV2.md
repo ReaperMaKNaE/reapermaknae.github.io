@@ -38,7 +38,7 @@ tag : [PaperReview]
 
  progressive learning을 하면서 점점 image scale은 커져가는데,(여기서 progressive learning의 경우는 아래 realblack0 님의 posting 참조)
 
-realblack0님 작성, "[딥러닝] 평생학습이란? (A Survey on Lifelong Learning)", [https://realblack0.github.io/2020/03/22/lifelong-learning.html](https://realblack0.github.io/2020/03/22/lifelong-learning.html)
+realblack0님 작성, "딥러닝, 평생학습이란? (A Survey on Lifelong Learning)", [https://realblack0.github.io/2020/03/22/lifelong-learning.html](https://realblack0.github.io/2020/03/22/lifelong-learning.html)
 
  그렇게 image scale을 키워가면서 같은 regularization(dropout 등과 같은 설정들)을 적용하는 것이 좋지 않다고 생각했다.(결과적으로 정확도가 떨어지는 경우가 생겼기 때문에) 이를 약간의 실험을 통해서, 작은 사이즈의 image에는 weak regularization을, 큰 사이즈의 image에는 hard regularization을 적용하는 것이 overfitting을 방지하는데에 도움이 된다고 한다.
 
