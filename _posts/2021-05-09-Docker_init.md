@@ -149,7 +149,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh
 ```
 
- 하면 설치 끝. libgl ~~~는 opencv 관련된건데, 이거 없으면 그... 아무튼 안됨. 아무튼 하면 된다.(만약 이거 안깔리면, 아래 가상환경 )
+ 하면 설치 끝. libgl ~~~는 opencv 관련된건데, 이거 없으면 그... 아무튼 안됨. 아무튼 하면 된다.(만약 이거 안깔리면, 콘다 다 깔고 환경 하나 만든 다음, pip install opencv-python 을 한 후에 libgl들을 설치하면 된다. )
 
 근데 콘다 명령어가 안먹을테니,
 
@@ -172,6 +172,8 @@ conda create -n recon python=3.6
 파이토치 링크: [https://pytorch.org/](https://pytorch.org/)
 
 detectron2 : [https://detectron2.readthedocs.io/en/latest/tutorials/install.html](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)
+
+ 여기까지 대략 10~15분 정도 걸린다.
 
 
 
