@@ -58,7 +58,7 @@ docker ps -a는 모든 컨테이너 확인.
 일단 그대로 옮겨오면,
 
 ```shell
-istribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
    && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
    && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
    
@@ -88,6 +88,8 @@ docker pull nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 ```shell
 docker images
 ```
+
+ 이미지를 기반으로 우리는 컨테이너를 만들것이다.
 
 
 
@@ -181,11 +183,13 @@ git clone ~~해서 어떤거 불러오면, git에 올라가있는 애는 우리�
 
 그리고 우리가 이걸 마음대로 바꿀수 있는 '로컬'을 컨테이너라고 보면 된다.
 
-그래서 image는 대충 환경구성(우분투, 센토스, 윈도우 뭐 아무거나. 추가적으로 쿠다를 지원하기도 한다.)의 베이스를 가져오는 거고, 우리가 그 이미지를 베이스로 컨테이너를 만든다.
+그래서 image는 대충 환경구성(우분투, 센토스, 윈도우 뭐 아무거나. 추가적으로 쿠다를 지원하기도 한다.)의 베이스를 가져오는 거고, 우리가 그 이미지를 베이스로 컨테이너를 만든다.(베이스 환경에서 우리만의 환경을 추가로 구축하는 것이 컨테이너)
 
-그리고 그 컨테이너는 아무리 지지고 볶아도 이미지는 안변한다. 우리가 뭔짓을 하던. 근데 우리가 만든 환경을 저장하고싶다? 그럼 컨테이너를 이미지로 만들 수 있는데, 이걸 일종의 깃 푸쉬 라고 보면 된다.
+그리고 그 컨테이너는 아무리 지지고 볶아도, 원래의 이미지는 안변한다. 우리가 뭔짓을 하던. 
 
- 자세한 내용은 딴 곳 검색해보면 나옴.
+근데 우리가 만든 환경을 저장하고싶다? 그럼 컨테이너를 이미지로 다시 만드는 과정이 있다. 이걸 일종의 깃 푸쉬 과정과 비슷하다고 보면 된다.
+
+ 자세한 내용은 검색해보면 나옴.
 
 
 
@@ -211,9 +215,11 @@ docker stop [container name]
 
 
 
+ 여튼 CUDA11.3을 원래 깔아놨었는데, 너무 에러가 자주뜨는게 고통스러워서 그냥 컨테이너를 새로 만들었다. 덕분에 아주 깔끔하게 잘 되고 있다.(CUDA 10.2, CUDNN 7 사용)
 
 
 
+ cuda 버전 바꾸려면 시간이 정말 많이 드는데, 이렇게 하면 그나마 좀 편한듯.
 
 
 
