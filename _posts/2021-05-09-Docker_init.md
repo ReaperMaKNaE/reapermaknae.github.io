@@ -225,7 +225,32 @@ docker stop [container name]
 
 
 
+11. 컨테이너 나가려면?
 
+```shell
+exit
+```
+
+ 위 명령어를 쳐주자. 그럼 container에서 나갈 수 있다. 작업했던 환경(pytorch, conda 등 설치한 패키지들)은 저장이 되니 걱정할 필요가 없다.
+
+ 참고로 여러개의 bash에서 하나의 container에 접속중인 경우, 모든 bash에서 container를 나가야(혹은 bash를 끄거나) Exited 라고 뜬다. 
+
+
+
+12. 그럼 어떻게 다시 시작해요?
+
+```shell
+docker ps -a
+```
+
+ 를 쳐보면, 나갔던 컨테이너는 STATUS에 Exited라고 뜬다. 해당 container에 다시 접속을 하고 싶다면,
+
+```shell
+nvidia-docker start [container name]
+nvidia-docker exec -it [container name] /bin/bash
+```
+
+ 로 들어가서 다시 작업을 해주면 된다.
 
 
 
