@@ -2,7 +2,7 @@
 layout : post
 title : "Docker 빠르게 시작하자"
 date : 2021-05-09 +0900
-description : CUDA에 고통받던 기억을 docker로 해결한 것을 남겨둔 기록입니다.
+description : CUDA의 알 수 없는 오류로 받던 고통을 docker로 해결한 기록입니다.
 tag : [ComputerVision]
 ---
 
@@ -251,6 +251,14 @@ nvidia-docker exec -it [container name] /bin/bash
 ```
 
  로 들어가서 다시 작업을 해주면 된다.
+
+ 만약 다른 bash에서 컨테이너에 접속하고 있다면, STATUS에 Up이라고 뜨고 있다. 이럴 때엔 그냥,
+
+```shell
+nvidia-docker exec -it [container name] /bin/bash
+```
+
+를 쳐주면 접속된다.
 
 
 
