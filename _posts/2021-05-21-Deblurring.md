@@ -56,7 +56,7 @@ __Event cameras__
 
 ### Learning Event-Based Motion Deblurring
 
- 주어진 motion-blurred image에 대해서, 우리의 목표는 T frame에서 sharp한 video sequence를 뽑아내는 것이다. 우리는 events의 set이 $\mathbb{E}_{1\sim T}$ 라 할 때 exposure동안 image-event sensor가 1 ~ T초 동안 촬영한 hybrid 라고 하자. 각 event $\mathcal{E}_{x,y,t}$ 를 time point t에서 (x,y)에서의 event라고 하자. 여기서 t는 integer일 필요는 없지만, fractional 해야한다.(high temporal resolution을 위해서 - 분수꼴로는 나타낼 수 있어야한다라는 뜻) polarity $p_{x,y,t}$ 는 local intensity의 변화를 의미한다. 이를 정리하게 되면,
+ 주어진 motion-blurred image에 대해서, 우리의 목표는 T frame에서 sharp한 video sequence를 뽑아내는 것이다. 우리는 events의 set이 $\mathbb{E}_{1{\sim}T}$ 라 할 때 exposure동안 image-event sensor가 1 ~ T초 동안 촬영한 hybrid 라고 하자. 각 event $\mathcal{E}_{x,y,t}$ 를 time point t에서 (x,y)에서의 event라고 하자. 여기서 t는 integer일 필요는 없지만, fractional 해야한다.(high temporal resolution을 위해서 - 분수꼴로는 나타낼 수 있어야한다라는 뜻) polarity $p_{x,y,t}$ 는 local intensity의 변화를 의미한다. 이를 정리하게 되면,
 
 ![img2](https://raw.githubusercontent.com/ReaperMaKNaE/reapermaknae.github.io/main/assets/img/20210521-2.PNG)
 
