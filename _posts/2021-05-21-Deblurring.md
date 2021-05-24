@@ -2,7 +2,7 @@
 layout : post
 title : "Learning Event-Based Motion Deblurring"
 date : 2021-05-21 +0900
-description : Panoptic DeepLab을 확장해 depth prediction에서 성공적인 결과를 낸 ViP-DeepLab 논문의 간단한 리뷰입니다.
+description : Event Camera를 이용하여 image deblurring을 성공적으로 수행한 Learning Event-Based Motion Deblurring 논문의 간단한 리뷰입니다.
 tag : [PaperReview]
 ---
 
