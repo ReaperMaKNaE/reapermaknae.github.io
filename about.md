@@ -11,11 +11,17 @@ title: About
 
 <center>Korea, Republic of</center>
 
-<center>Sungkyunkwan Univ</center>
+<center>Sungkyunkwan Univ. (Bachelor)</center>
 
 <center>Department of Electrical and Electronic Engineering</center>
 
 <center>Department of Mechanical Engineering</center>
+
+<center> 2021~<center>
+
+<center> KAIST (Master) <center>
+
+<center>Department of Electrical and Electronic Engineering</center>
 
 
 
