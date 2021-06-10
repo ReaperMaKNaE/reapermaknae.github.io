@@ -174,10 +174,10 @@ vim ~/.bashrc
 아래를 아무데나 추가해준다. 맨 위에넣든 맨 아래에 넣든 상관 없음.
 
 ```bash
-export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64\
+export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\
                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib\
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib\
                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
@@ -541,6 +541,34 @@ nvidia-docker exec -it [container name] /bin/bash
 ```
 
 를 쳐주면 접속된다.
+
+
+
+### Server에 vscode깔기(선택사항)
+
+
+
+ 간혹가다 server를 들고와서 할 때가 있다. 참고로 난 가끔 이렇게 한다.(3D에서 GUI를 써야하는데 해당 GUI가 vmware같은 것들로는 해결이 안되는 경우가 가끔 있어서, 직접 ubuntu로 들어가야하는 경우가 있다. 현재 본인은 KVM으로 2대의 PC를 운용 중)
+
+ 아무튼, 설치 명령어는 다음과 같다.
+
+```bash
+sudo apt-get install curl
+sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code
+```
+
+ 위와 같이 진행 시 vscode 설치 완료.
+
+```bash
+code
+```
+
+ bash에 위와 같은 명령어로 바로 vscode를 킬 수 있다.
+
+
 
 
 
